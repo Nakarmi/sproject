@@ -55,7 +55,6 @@
                        <input type="checkbox" id="drop">
                        <ul class="menu mt-2">
                           <li class="mx-lg-3 mx-md-2 my-md-0 my-1"><a href="{% url 'home' %}">Home</a></li>
-                          <li class="mx-lg-3 mx-md-2 my-md-0 my-1"><a href="{% url 'single_about' %}">About</a></li>
                           <!-- Service -->
                           <li class="mx-lg-3 mx-md-2 my-md-0 my-1">
                             <!-- First Tier Drop Down -->
@@ -63,7 +62,7 @@
                            <input type="checkbox" id="drop-2">
                            <ul>
                               <!-- <li><a href="#team" class="drop-text">Founders</a></li> -->
-                              <li><a href="#" class="drop-text">Donation</a></li>
+                              <li><a href="{% url 'single_donation' %}" class="drop-text">Donation</a></li>
                               <li><a href="{% url 'single_joinus' %}" class="drop-text">Volunteer</a></li>
                               <li><a href="{% url 'single_humanright' %}" class="drop-text">Human Rights</a></li>
                               <li><a href="#" class="drop-text">Sponsor</a></li>
@@ -82,6 +81,7 @@
                              </ul>
                           </li>
                           <!-- //More -->
+                          <li class="mx-lg-3 mx-md-2 my-md-0 my-1"><a href="{% url 'single_about' %}">About</a></li>
                           <li><a href="#contactus">Contact Us</a></li>
                           <li><a href="{% url 'single_joinus' %}">Join Us</a></li>
                        </ul>

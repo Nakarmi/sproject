@@ -48,6 +48,7 @@ class Volunteer(models.Model):
     email = models.CharField(validators=[email_regex], max_length=100, null=True)
     phone_regex = RegexValidator(regex=r'^\d{10}$', message="Phone number must be entered in the format: '98********'. Up to 10 digits allowed.")
     contact = models.CharField(validators=[phone_regex], max_length=10, null=True)
+    status = models.BooleanField(null=True)
     joined_from = models.DateTimeField(auto_now_add=True)
     # slug = models.SlugField(max_length=255, null=True)
 
@@ -75,3 +76,24 @@ class ContactUs(models.Model):
 
     def __str__(self):
         return self.name+" "+self.email+" "+self.contact+" "+str(self.submitted_at)+" "+self.message
+
+    class Meta:
+        verbose_name_plural = "Contact us"
+
+#DONATION
+class Donation(models.Model):
+    name = models.CharField(max_length=255)    
+    email_regex = RegexValidator(regex=r'^[a-z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w{2,3}$', message="Email must be entered in the format: 'example@example.com'")
+    email = models.CharField(validators=[email_regex], max_length=100, blank=True)
+    phone_regex = RegexValidator(regex=r'^\d{10}$', message="Phone number must be entered in the format: '98********'. Up to 10 digits allowed.")
+    contact = models.CharField(validators=[phone_regex], max_length=10)
+    country = models.CharField(max_length=100)  
+    address = models.CharField(max_length=100, blank=True)
+    city = models.CharField(max_length=100, blank=True)
+    zone = models.CharField(max_length=100)
+    # zip_regex = RegexValidator(regex=r'^\d{10}$', message="Phone number must be entered in the format: '98********'. Up to 10 digits allowed.")
+    # zip = models.CharField(max_length=100, null=True)
+    # slug = models.SlugField(max_length=255, null=True)
+
+    def __str__(self):
+        return self.name+" "+self.email+" "+self.contact+" "+self.country+" "+self.address+" "+self.city+" "+self.zone

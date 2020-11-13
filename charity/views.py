@@ -1,6 +1,6 @@
 from django.shortcuts import render, HttpResponse
 from django.views import View
-from charity.models import Volunteer, State, Blog, Gallery
+from charity.models import Volunteer, State, Blog, Gallery, Donation
 
 # Create your views here.
 #single_joinus
@@ -19,7 +19,6 @@ def SingleJoinusView(request):
         res = "Dear {} Thankyou for your support".format(uname)
         return render(request,template_name,{"status":res})
         # return HttpResponse
-
     return render(request, template_name)
 
 #single_about
@@ -64,5 +63,23 @@ def ContactUsView(request):
         res = "Dear {} Thankyou for supporting us.".format(name)
         return render(request,template_name,{"status":res})
         # return HttpResponse
+    return render(request, template_name)
 
+#single_donation
+def SingleDonationView(request):
+    template_name = "single_donation.html"
+    if request.method=="POST":        
+        uname = request.POST["name"]
+        mail = request.POST["email"]
+        contact = request.POST["contact"]
+        country = request.POST["country"]
+        add = request.POST["address"]
+        city = request.POST["city"]
+        zone = request.POST["zone"]
+
+        data = Donation(name=uname,email=mail,contact=contact,country=country,address=add,city=city,zone=zone)
+        data.save()
+        res = "Dear {} Thankyou for your support".format(uname)
+        return render(request,template_name,{"status":res})
+        # return HttpResponse
     return render(request, template_name)

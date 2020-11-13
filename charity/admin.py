@@ -1,5 +1,5 @@
 from django.contrib import admin
-from charity.models import Blog, Gallery, Volunteer, State, ContactUs
+from charity.models import Blog, Gallery, Volunteer, State, ContactUs, Donation
 
 # Register your models here.
 # @admin.register(Blog)
@@ -24,9 +24,9 @@ class GalleryAdmin(admin.ModelAdmin):
 
 # Volunteer
 class VolunteerAdmin(admin.ModelAdmin):
-    list_display = ["id", "name", "position", "address", "gender", "email", "contact", "joined_from"]
+    list_display = ["id", "name", "position", "address", "gender", "email", "contact", "joined_from", "status"]
     search_fields = ["name", "address", "contact"]
-    list_filter = ["joined_from", "gender"]
+    list_filter = ["joined_from", "gender", "status"]
     # list_editable = ["address"]
 
 #STATE
@@ -39,8 +39,16 @@ class ContactUsAdmin(admin.ModelAdmin):
     search_fields = ["name", "email"]
     list_filter = ["submitted_at"]
 
+# Donation
+class DonationAdmin(admin.ModelAdmin):
+    list_display = ["id", "name", "contact", "country", "zone"]
+    search_fields = ["name", "city"]
+    list_filter = ["zone"]
+    # list_editable = ["address"]
+
 admin.site.register(Blog, BlogAdmin)
 admin.site.register(Gallery, GalleryAdmin)
 admin.site.register(Volunteer, VolunteerAdmin)
 admin.site.register(State, StateAdmin)
 admin.site.register(ContactUs, ContactUsAdmin)
+admin.site.register(Donation, DonationAdmin)
