@@ -81,7 +81,7 @@
                              </ul>
                           </li>
                           <!-- //More -->
-                          <li class="mx-lg-3 mx-md-2 my-md-0 my-1"><a href="{% url 'single_about' %}">About</a></li>
+                          <li class="mx-lg-3 mx-md-2 my-md-0 my-1"><a href="{% url 'single_about' %}">Activities</a></li>
                           <li><a href="#contactus">Contact Us</a></li>
                           <li><a href="{% url 'single_joinus' %}">Join Us</a></li>
                        </ul>
@@ -107,30 +107,36 @@
                 <div class="form-container">
                     <div class="style-form">
                         <form action="" method="post">
-                            {% csrf_token  %}                           
+                            {% csrf_token  %}         
+                            <!-- name -->
                             <div class=" form-group contact-forms">
                                 <input type="text" class="form-control" placeholder="Contributors' Name" name="name" required="">
                             </div>
+                            <!-- email -->
                             <div class="form-group contact-forms">
-                                <input type="email" class="form-control" placeholder="Email" name="email">
+                                <input type="email" class="form-control" placeholder="Email (Optional)" name="email">
                             </div>
+                            <!-- contact -->
                             <div class=" form-group contact-forms">
                                 <input type="tel" class="form-control" placeholder="Contact" name="contact" pattern="[0-9]{10}" required="">
                             </div>
+                            <!-- country -->
                             <div class="form-group contact-forms">
                                 <input type="text" class="form-control" placeholder="Country" name="country" required="">
                             </div> 
+                            <!-- address -->
                             <div class=" form-group contact-forms">
                                 <div class="address">
-                                    <input type="text" class="form-control" placeholder="Current Address" name="address">    
+                                    <input type="text" class="form-control" placeholder="Current Address (Optional)" name="address">    
                                 </div> 
                                 <div class="city" >
-                                    <input type="text" class="form-control" placeholder="City" name="city">
+                                    <input type="text" class="form-control" placeholder="City (Optional)" name="city">
                                 </div>                                                                                               
                             </div> 
+                            <!-- zone -->
                             <div class="form-group contact-forms">
                                 <select name="zone" id="zone">
-                                    <option value="zone" selected>--Zone--</option>
+                                    <option value="zone" selected>-- Zone --</option>
                                     <option value="mechi">Mechi</option>
                                     <option value="koshi">Koshi</option>
                                     <option value="sagarmatha">Sagarmatha</option>
