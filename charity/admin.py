@@ -24,7 +24,7 @@ class GalleryAdmin(admin.ModelAdmin):
 
 # Volunteer
 class VolunteerAdmin(admin.ModelAdmin):
-    list_display = ["id", "name", "position", "address", "gender", "email", "contact", "joined_from", "status"]
+    list_display = ["id", "name", "address", "gender", "email", "contact", "time", "joined_from", "status"]
     search_fields = ["name", "address", "contact"]
     list_filter = ["joined_from", "gender", "status"]
     # list_editable = ["address"]

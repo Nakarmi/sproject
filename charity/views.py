@@ -6,15 +6,15 @@ from charity.models import Volunteer, State, Blog, Gallery, Donation
 #single_joinus
 def SingleJoinusView(request):
     template_name = "single_joinus.html"
-    if request.method=="POST":
-        post = request.POST["position"]
+    if request.method=="POST":        
         uname = request.POST["name"]
         add = request.POST["address"]
         gen = request.POST["gender"]
         mail = request.POST["email"]
         contact = request.POST["contact"]
+        time = request.POST["time"]
 
-        data = Volunteer(position=post,name=uname,address=add,gender=gen,email=mail,contact=contact)
+        data = Volunteer(name=uname,address=add,gender=gen,email=mail,contact=contact,time=time)
         data.save()
         res = "Dear {} Thankyou for your support".format(uname)
         return render(request,template_name,{"status":res})

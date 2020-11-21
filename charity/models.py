@@ -39,8 +39,7 @@ class Gallery(models.Model):
 class Volunteer(models.Model):
     g = (
         ("M", "Male"), ("F", "Female"), ("T", "LGBTQ")
-    )
-    position = models.CharField(max_length=75)
+    )    
     name = models.CharField(max_length=255)    
     address = models.CharField(max_length=100, null=True)
     gender = models.CharField(max_length=12, choices=g, null=True)
@@ -48,12 +47,13 @@ class Volunteer(models.Model):
     email = models.CharField(validators=[email_regex], max_length=100, null=True)
     phone_regex = RegexValidator(regex=r'^\d{10}$', message="Phone number must be entered in the format: '98********'. Up to 10 digits allowed.")
     contact = models.CharField(validators=[phone_regex], max_length=10, null=True)
+    time = models.CharField(max_length=75)
     status = models.BooleanField(null=True)
     joined_from = models.DateTimeField(auto_now_add=True)
     # slug = models.SlugField(max_length=255, null=True)
 
     def __str__(self):
-        return self.position+" "+self.name+" "+self.address+" "+self.gender+" "+self.email+" "+self.contact+" "+str(self.joined_from)
+        return self.name+" "+self.address+" "+self.gender+" "+self.email+" "+self.contact+" "+str(self.joined_from)
 
 #STATE
 class State(models.Model):
