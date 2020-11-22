@@ -13,7 +13,7 @@ class Blog(models.Model):
     count = models.IntegerField(default=0)
     # slug = models.SlugField(max_length=255, null=True)
     # category = models.ManyToManyField(Category, related_name="news_categoreis")
-    author = models.CharField(max_length=255, null=False)
+    author = models.CharField(max_length=255, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     edited_by = models.CharField(max_length=255, blank=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -82,6 +82,31 @@ class ContactUs(models.Model):
 
 #DONATION
 class Donation(models.Model):
+    z = (
+        ("Z", "Zones"),
+        ("M", "Mechi"), 
+        ("K", "Koshi"), 
+        ("S", "Sagarmatha"),
+        ("J", "Janapkur"), 
+        ("N", "Narayani"),  
+        ("B", "Bagmati"),
+        ("G", "Gandaki"), 
+        ("L", "Lumbini"), 
+        ("D", "Dhaulagiri"),
+        ("R", "Ratpi"), 
+        ("B", "Bheri"), 
+        ("K", "Karnali"),
+        ("S", "Seti"), 
+        ("M", "Mahakali"), 
+    ) 
+    p = (
+        ('P', 'Purpose'),
+        ('f', 'Food'),
+        ('e', 'Education'),
+        ('c', 'Clothing'),
+        ('h', 'Health'),
+        ('s', 'Shelter'),
+    )
     name = models.CharField(max_length=255)    
     email_regex = RegexValidator(regex=r'^[a-z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w{2,3}$', message="Email must be entered in the format: 'example@example.com'")
     email = models.CharField(validators=[email_regex], max_length=100, blank=True)
@@ -90,13 +115,14 @@ class Donation(models.Model):
     country = models.CharField(max_length=100)  
     address = models.CharField(max_length=100, blank=True)
     city = models.CharField(max_length=100, blank=True)
-    zone = models.CharField(max_length=100)
+    zone = models.CharField(max_length=100, choices=z, default='Zone')
+    purpose = models.CharField(max_length=9, choices=p, default='Purpose')
     # zip_regex = RegexValidator(regex=r'^\d{10}$', message="Phone number must be entered in the format: '98********'. Up to 10 digits allowed.")
     # zip = models.CharField(max_length=100, null=True)
     # slug = models.SlugField(max_length=255, null=True)
 
     def __str__(self):
-        return self.name+" "+self.email+" "+self.contact+" "+self.country+" "+self.address+" "+self.city+" "+self.zone
+        return self.name+" "+self.email+" "+self.contact+" "+self.country+" "+self.address+" "+self.city+" "+self.zone+" "+self.purpose
 
 #ACTIVITIES
 class Activities(models.Model):
@@ -109,7 +135,7 @@ class Activities(models.Model):
     date = models.DateField(auto_now_add=False)
     event = models.CharField(max_length=750)
     location = models.CharField(max_length=250)
-    status = models.CharField(max_length=9, choices=a, default='NULL')
+    status = models.CharField(max_length=9, choices=a)
 
     def __str__(self):
         return str(self.date)+" "+self.event+" "+self.location+" "+self.status
