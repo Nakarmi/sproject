@@ -104,13 +104,13 @@
                     <div class="style-form">
                         <form action="" method="post">
                             {% csrf_token  %}                           
-                           <div class=" form-group contact-forms">
-                              <input type="text" class="form-control" placeholder="Name" name="name" required="">
-                           </div>
-                           <div class=" form-group contact-forms">
-                              <input type="text" class="form-control" placeholder="Address" name="address" required="">
-                           </div>
-                           <div class="form-group contact-forms">
+                            <div class=" form-group contact-forms">
+                                <input type="text" class="form-control" placeholder="Name" name="name" required="">
+                            </div>
+                            <div class=" form-group contact-forms">
+                                <input type="text" class="form-control" placeholder="Address" name="address" required="">
+                            </div>
+                            <div class="form-group contact-forms">
                                 <ul class="form-gender">
                                     <li>
                                         <input type="radio" value="M" class="form-gender1" name="gender" required=""> 
@@ -125,16 +125,19 @@
                                         <span class="gender-span">LGBTQ</span>
                                     </li>                                
                                 </ul>                                                        
-                           </div>
-                           <div class="form-group contact-forms">
-                              <input type="email" class="form-control" placeholder="Email" name="email" required="">
-                           </div>
-                           <div class=" form-group contact-forms">
-                              <input type="tel" class="form-control" placeholder="Contact" name="contact" pattern="[0-9]{10}" required="">
-                           </div>
-                           <div class=" form-group contact-forms">
+                            </div>
+                            <div class="form-group contact-forms">
+                                <input type="email" class="form-control" placeholder="Email (if any)" name="email">
+                            </div>
+                            <div class=" form-group contact-forms">
+                                <input type="tel" class="form-control" placeholder="Contact (if any)" name="contact" pattern="[0-9]{10}">
+                            </div>
+                            <div class=" form-group contact-forms">
                             <input type="text" class="form-control" placeholder="Available at (Day) - (Time)" name="time" required="">
-                         </div>
+                            </div>
+                            <div class=" form-group contact-forms" id="card">
+                                <input type="file" class="form-control" placeholder="Valid ID Card" name="card" required="">
+                            </div>
                            <button type="submit" class="btn sent-butnn">Join</button>
                         </form>
                     </div>                    

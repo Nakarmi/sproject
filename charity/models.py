@@ -50,6 +50,7 @@ class Volunteer(models.Model):
     time = models.CharField(max_length=75)
     status = models.BooleanField(null=True)
     joined_from = models.DateTimeField(auto_now_add=True)
+    image = models.ImageField(upload_to="ID", null=True)
     # slug = models.SlugField(max_length=255, null=True)
 
     def __str__(self):
@@ -111,7 +112,8 @@ class Donation(models.Model):
     email_regex = RegexValidator(regex=r'^[a-z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w{2,3}$', message="Email must be entered in the format: 'example@example.com'")
     email = models.CharField(validators=[email_regex], max_length=100, blank=True)
     phone_regex = RegexValidator(regex=r'^\d{10}$', message="Phone number must be entered in the format: '98********'. Up to 10 digits allowed.")
-    contact = models.CharField(validators=[phone_regex], max_length=10)
+    contact = models.CharField(validators=[phone_regex], max_length=10, blank=True)
+    job = models.CharField(max_length=140, null=True)
     country = models.CharField(max_length=100)  
     address = models.CharField(max_length=100, blank=True)
     city = models.CharField(max_length=100, blank=True)

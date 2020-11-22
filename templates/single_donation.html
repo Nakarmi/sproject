@@ -114,11 +114,15 @@
                             </div>
                             <!-- email -->
                             <div class="form-group contact-forms">
-                                <input type="email" class="form-control" placeholder="Email (Optional)" name="email">
+                                <input type="email" class="form-control" placeholder="Email (if any)" name="email">
                             </div>
                             <!-- contact -->
                             <div class=" form-group contact-forms">
-                                <input type="tel" class="form-control" placeholder="Contact" name="contact" pattern="[0-9]{10}" required="">
+                                <input type="tel" class="form-control" placeholder="Contact (if any)" name="contact" pattern="[0-9]{10}">
+                            </div>
+                            <!-- Occupation -->
+                            <div class=" form-group contact-forms">
+                                <input type="text" class="form-control" placeholder="Occupation" name="job" required="">
                             </div>
                             <!-- country -->
                             <div class="form-group contact-forms">
@@ -127,10 +131,10 @@
                             <!-- address -->
                             <div class=" form-group contact-forms">
                                 <div class="address">
-                                    <input type="text" class="form-control" placeholder="Current Address (Optional)" name="address">    
+                                    <input type="text" class="form-control" placeholder="Current Address (Opt.)" name="address">    
                                 </div> 
                                 <div class="city" >
-                                    <input type="text" class="form-control" placeholder="City (Optional)" name="city">
+                                    <input type="text" class="form-control" placeholder="City (Opt.)" name="city">
                                 </div>                                                                                               
                             </div> 
                             <!-- zone -->
@@ -152,6 +156,7 @@
                                     <option value="seti">Seti</option>
                                     <option value="mahakali">Mahakali</option>
                                 </select>
+                                <!-- purpose -->
                                 <select name="purpose" id="purpose">
                                     <option value="purposes" selected>-- Purposes --</option>
                                     <option value="food">Food</option>
@@ -160,7 +165,28 @@
                                     <option value="health">Health</option>
                                     <option value="shelter">Shelter</option>
                                 </select>
-                            </div>                                                                                           
+                            </div>   
+                            <!-- qr_code -->
+                            <div class="qrcode">
+                                <img src="../static/images/qqrcode.png" alt="QR" >
+                                <span class="qrtext">
+                                    *Scan to donate.
+                                </span>                                
+                            </div>    
+                            <!-- or -->
+                            <div class="or">
+                                OR
+                            </div>
+                            <!-- cheque -->
+                            <div class="cheque">
+                                *Your sponsorship will begin once the first payment has been received in our office. 
+                                Please mail your payment to the office address below. (Incase you are donating from cheque).
+                                <p class="cheque_mail">
+                                    <b>Bank: </b><emphasize>ABC Bank Ltd.</emphasize><br>
+                                    <b>Account no.: </b><emphasize>156-156-78979</emphasize><br>
+                                    <a href="mailto:bpin.nakarmi77@gmail.com">bpin.nakarmi77@gmail.com</a>
+                                </p>
+                            </div>
                            <button type="submit" class="btn sent-butnn">Donate</button>
                         </form>
                     </div>                    
