@@ -148,7 +148,7 @@ class Sponsor(models.Model):
     name = models.CharField(max_length=75)
     age = models.IntegerField()
     address = models.CharField(max_length=75)
-    detail = models.CharField(max_length=250)
+    detail = models.CharField(max_length=750)
 
     def __str__(self):
         return self.name+" "+str(self.age)+" "+self.address+" "+self.detail
