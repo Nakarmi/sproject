@@ -1,6 +1,6 @@
 from django.shortcuts import render, HttpResponse
 from django.views import View
-from charity.models import Volunteer, State, Blog, Gallery, Donation
+from charity.models import Volunteer, State, Blog, Gallery, Donation, Activities
 
 # Create your views here.
 #single_joinus
@@ -23,8 +23,9 @@ def SingleJoinusView(request):
 
 #single_about
 def SingleAboutView(request):
+    about = Activities.objects.all().order_by('date').reverse()
     template_name = "single_about.html"
-    return render(request, template_name)
+    return render(request, template_name, {'about':about})
 
 #single_blog
 def SingleBlogView(request):

@@ -53,7 +53,7 @@ class Volunteer(models.Model):
     # slug = models.SlugField(max_length=255, null=True)
 
     def __str__(self):
-        return self.name+" "+self.address+" "+self.gender+" "+self.email+" "+self.contact+" "+str(self.joined_from)
+        return self.name+" "+self.address+" "+self.gender+" "+self.email+" "+self.contact+" "+str(self.joined_from)+" "+str(self.status)
 
 #STATE
 class State(models.Model):
@@ -97,3 +97,23 @@ class Donation(models.Model):
 
     def __str__(self):
         return self.name+" "+self.email+" "+self.contact+" "+self.country+" "+self.address+" "+self.city+" "+self.zone
+
+#ACTIVITIES
+class Activities(models.Model):
+    a = (
+        ('Null', 'NULL'),
+        ('Planned', 'PLANNED'),
+        ('Ongoing', 'ONGOING'),
+        ('Completed', 'COMPLETED'),
+    )
+    date = models.DateField(auto_now_add=False)
+    event = models.CharField(max_length=750)
+    location = models.CharField(max_length=250)
+    status = models.CharField(max_length=9, choices=a, default='NULL')
+
+    def __str__(self):
+        return str(self.date)+" "+self.event+" "+self.location+" "+self.status
+
+    class Meta:
+        verbose_name_plural = "Activities"
+
