@@ -127,7 +127,6 @@ class Donation(models.Model):
 #ACTIVITIES
 class Activities(models.Model):
     a = (
-        ('Null', 'NULL'),
         ('Planned', 'PLANNED'),
         ('Ongoing', 'ONGOING'),
         ('Completed', 'COMPLETED'),
@@ -142,4 +141,18 @@ class Activities(models.Model):
 
     class Meta:
         verbose_name_plural = "Activities"
+
+#SPONSORS
+class Sponsor(models.Model):    
+    image = models.ImageField(upload_to="sponsor", null=True)
+    name = models.CharField(max_length=75)
+    age = models.IntegerField()
+    address = models.CharField(max_length=75)
+    detail = models.CharField(max_length=250)
+
+    def __str__(self):
+        return self.name+" "+str(self.age)+" "+self.address+" "+self.detail
+
+
+
 

@@ -29,7 +29,7 @@
         <!-- //font-awesome icons -->
         <!--stylesheets-->
         <link href="../static/css/style.css" rel='stylesheet' type='text/css' media="all">
-        <link href="../static/css/blog.css" rel='stylesheet' type='text/css' media="all">
+        <link href="../static/css/sponsor.css" rel='stylesheet' type='text/css' media="all">
         <!--//stylesheets-->
         <link rel="icon" href="../static/images/title.png" type="images/jpg" sizes="12x12">
         <link href="//fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700" rel="stylesheet">
@@ -49,19 +49,19 @@
                        <label for="drop" class="toggle">Menu</label>
                        <input type="checkbox" id="drop">
                        <ul class="menu mt-2">
-                          <li class="mx-lg-3 mx-md-2 my-md-0 my-1"><a href="{% url 'home' %}">Home</a></li>
+                          <li class="mx-lg-3 mx-md-2 my-md-0 my-1"><a href="{% url 'home' %}">Home</a></li>                          
                           <!-- Service -->
                           <li class="mx-lg-3 mx-md-2 my-md-0 my-1">
-                            <!-- First Tier Drop Down -->
-                           <a href="#">Services <span class="fa fa-angle-down" aria-hidden="true"></span></a>
-                           <input type="checkbox" id="drop-2">
-                           <ul>
-                              <!-- <li><a href="#team" class="drop-text">Founders</a></li> -->
-                              <li><a href="{% url 'single_donation' %}" class="drop-text">Donation</a></li>
-                              <li><a href="{% url 'single_joinus' %}" class="drop-text">Volunteer</a></li>
-                              <li><a href="{% url 'single_humanright' %}" class="drop-text">Human Rights</a></li>
-                              <li><a href="{% url 'single_sponsor' %}" class="drop-text">Sponsor</a></li>
-                           </ul>
+                              <!-- First Tier Drop Down -->
+                             <a href="#">Services <span class="fa fa-angle-down" aria-hidden="true"></span></a>
+                             <input type="checkbox" id="drop-2">
+                             <ul>
+                                <!-- <li><a href="#team" class="drop-text">Founders</a></li> -->
+                                <li><a href="{% url 'single_donation' %}" class="drop-text">Donation</a></li>
+                                <li><a href="{% url 'single_joinus' %}" class="drop-text">Volunteer</a></li>
+                                <li><a href="{% url 'single_humanright' %}" class="drop-text">Human Rights</a></li>
+                                <li><a href="{% url 'single_sponsor' %}" class="drop-text">Sponsor</a></li>
+                             </ul>
                           </li>
                           <!-- //Service -->
                           <!-- More -->
@@ -84,58 +84,31 @@
                     <!-- //nav -->
                  </div>              
             </div>
-            <!-- //header -->
             <!-- banner -->
-            <div class="main-banner">
-                <div class="style-banner ">
-                    <h4 class="mb-1">Blogs</h4>  
-                </div>                                       
-                    <!-- <div class="row"> 
-                        {% for i in blog %}  
-                        <div class="cover_image">
-                            <img src="{{ i.cover_image.url }}" alt="The Beginning" />
-                        </div>                                                     
-                        <div  class="blog_title">
-                            <span>{{i.title}}</span>
-                        </div>
-                        <div  class="created_at">
-                            <span>{{i.created_at}}</span>                                    
-                        </div>                        
-                        <div class="content_1">
-                            {{i.content|truncatechars:55}}
-                            <a href="#">Read more</a>
-                        </div>
-                        <div>
-                            <span class="author">-{{i.author}}</span>
-                        </div>
-                        {% endfor %}
-                    </div>                                                                -->
-                    <div class="row">
-                        {% for i in blog %} 
-                            <div class="margin_b">
-                                <div class="cover_image">                         
-                                    <img src="{{ i.cover_image.url }}" alt="The Beginning" />                            
-                                </div>
-                                <div  class="blog_title">
-                                    <span>{{i.title}}</span>
-                                </div>
-                                <div  class="created_at">
-                                    <span>{{i.created_at}}</span>                                    
-                                </div> 
-                                <div class="content_1">
-                                    {{i.content|truncatechars:55}}
-                                    <a href="#">Read more</a>
-                                </div>
-                                <div>
-                                    <span class="author">-{{i.author}}</span>
-                                </div>
-                            </div>                            
-                        {% endfor %}
-                    </div>                
+            <div class="main-banner">                
+                <div class="style-banner">
+                    <h4 class="mb-1">Contribute For Their Brighter Future</h4>  
+                </div>
+                {% for i in sponsor %}
+                    <div class="row">                        
+                            <img src="{{ i.image.url }}" alt="Sponsor" /> 
+                            <p>                                
+                                <b>Name:</b> {{i.name}} <br>
+                                <b>Age:</b> {{i.age}} <br>
+                                <b>Address:</b> {{i.address}} <br>
+                                <b>Details:</b> {{i.detail}} <br>
+                                <button>
+                                    <a href="/charity/single_joinus" class="btn_scroll">Donate</a> 
+                                </button>
+                            </p>                                                     
+                    </div>   
+                {% endfor %}                                                                    
             </div>
             <!-- //banner -->
+            <!-- //header -->
         </div>
         <!--//header-->
+
         <!-- Location -->
         <div class="address_mail_footer_grids">
             <iframe src="https://maps.google.com/maps?q=orchid%20international%20college&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>

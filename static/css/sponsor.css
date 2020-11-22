@@ -1,0 +1,42 @@
+.style-banner {
+    text-align: center;
+    padding-top: 11em;
+}
+
+.row {
+    margin-top: 5px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.row p {
+    color: #ffffff;
+    background-color: rgba(0, 179, 129, 0.8);
+    padding-right: 5px;
+    padding-left: 7px;
+    width: 80%;
+    text-align: justify;
+}
+
+.row img {
+    width: 20%;
+    height: 250px;
+}
+
+.row:hover {
+    transform: scale(1.1);
+}
+
+button {
+    background-color: rgba(0, 179, 129, 0.8);
+    border: none;
+}
+
+.btn_scroll {
+    color: rgba(255, 255, 255, 0.8);
+} 
+
+.btn_scroll:hover {
+    color: rgba(255, 255, 255, 1);
+}

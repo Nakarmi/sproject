@@ -23,6 +23,10 @@
     width: 250px;
 }
 
+.margin_b:hover {
+    transform: scale(1.1);
+}
+
 .cover_image img {
     height: 250px;
     width: 250px;

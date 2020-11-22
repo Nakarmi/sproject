@@ -60,7 +60,7 @@
                                 <li><a href="{% url 'single_donation' %}" class="drop-text">Donation</a></li>
                                 <li><a href="{% url 'single_joinus' %}" class="drop-text">Volunteer</a></li>
                                 <li><a href="{% url 'single_humanright' %}" class="drop-text">Human Rights</a></li>
-                                <li><a href="#" class="drop-text">Sponsor</a></li>
+                                <li><a href="{% url 'single_sponsor' %}" class="drop-text">Sponsor</a></li>
                              </ul>
                           </li>
                           <!-- //Service -->
@@ -76,7 +76,7 @@
                              </ul>
                           </li>
                           <!-- //More -->
-                          <li class="mx-lg-3 mx-md-2 my-md-0 my-1"><a href="{% url 'single_about' %}">Activites</a></li>
+                          <li class="mx-lg-3 mx-md-2 my-md-0 my-1"><a href="{% url 'single_about' %}">About Us</a></li>
                           <li><a href="#contactus">Contact Us</a></li>
                           <li><a href="{% url 'single_joinus' %}">Join Us</a></li>
                        </ul>
@@ -89,9 +89,6 @@
                 <div class="container">
                     <div class="style-banner">
                        <h4 class="mb-1">About Us</h4>
-                       <!-- {% for i in about %}
-                            
-                       {% endfor %} -->
                        <table>
                            <tr>
                                <th>ID</th>

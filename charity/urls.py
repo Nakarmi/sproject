@@ -10,5 +10,6 @@ urlpatterns = [
    path("single_humanright", views.SingleHumanrightView, name="single_humanright"),
    path("single_donation", views.SingleDonationView, name="single_donation"),
    path("partials/contact", views.ContactUsView, name="contact"),
+   path("single_sponsor", views.SingleSponsorView, name="single_sponsor"),
 ]
  

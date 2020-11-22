@@ -1,6 +1,6 @@
 from django.shortcuts import render, HttpResponse
 from django.views import View
-from charity.models import Volunteer, State, Blog, Gallery, Donation, Activities
+from charity.models import Volunteer, State, Blog, Gallery, Donation, Activities, ContactUs, Sponsor
 
 # Create your views here.
 #single_joinus
@@ -85,3 +85,9 @@ def SingleDonationView(request):
         return render(request,template_name,{"status":res})
         # return HttpResponse
     return render(request, template_name)
+
+#single_sponsor
+def SingleSponsorView(request):
+    sponsor = Sponsor.objects.all().order_by('age')
+    template_name = "single_sponsor.html"
+    return render(request, template_name, {'sponsor' : sponsor})
