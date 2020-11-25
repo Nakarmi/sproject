@@ -23,7 +23,7 @@
 }
 
 .gallery-solo p {
-    background-color: rgba(0, 179, 129, 0.7);
+    background-color: rgba(0, 179, 129, 0.9);
     color: #ffffff;
     text-align: center;
     margin: 5px;
@@ -33,4 +33,5 @@
 
 .gallery-solo:hover {
     transform: scale(1.7);
+    background-color: rgba(0, 179, 129, 1);
 }

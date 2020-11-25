@@ -25,6 +25,7 @@ urlpatterns = [
     
     # path("", views.home, name="home"),
     path("", views.home, name="home"),
+    path('', include('charity.urls')),
     path("charity/", include("charity.urls")), 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

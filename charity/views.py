@@ -77,10 +77,10 @@ def SingleDonationView(request):
         country = request.POST["country"]
         add = request.POST["address"]
         city = request.POST["city"]
-        province = request.POST["province"]
+        zone = request.POST["zone"]
         purpose = request.POST["purpose"]
 
-        data = Donation(name=uname,email=mail,contact=contact,job=job,country=country,address=add,city=city,province=province, purpose=purpose)
+        data = Donation(name=uname,email=mail,contact=contact,job=job,country=country,address=add,city=city,zone=zone, purpose=purpose)
         data.save()
         res = "Dear {} Thankyou for your support".format(uname)
         return render(request,template_name,{"status":res})
