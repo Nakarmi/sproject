@@ -14,13 +14,12 @@ class BlogAdmin(admin.ModelAdmin):
     list_display = ["id", "title", "cover_image", "author", "created_at", "edited_by", "updated_at"]
     search_fields = ["title", "author"]
     list_filter = ["author", "created_at"]
-    # prepopulated_fields = {"slug": ("title",)}
+    prepopulated_fields = {"slug": ("title",)}
     # readonly_fields = ("author",)
 
 # Gallery
 class GalleryAdmin(admin.ModelAdmin):
     list_display = ["id", "title", "image"]
-    # prepopulated_fields = {"slug": ("title",)}
 
 # Volunteer
 class VolunteerAdmin(admin.ModelAdmin):

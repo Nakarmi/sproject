@@ -10,8 +10,8 @@ from django.core.validators import RegexValidator
 class Blog(models.Model):
     title = models.CharField(max_length=255)
     content = models.TextField()
-    count = models.IntegerField(default=0)
-    # slug = models.SlugField(max_length=255, null=True)
+    # count = models.IntegerField(default=0)
+    slug = models.SlugField(max_length=255, null=True)
     # category = models.ManyToManyField(Category, related_name="news_categoreis")
     author = models.CharField(max_length=255, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
