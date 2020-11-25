@@ -83,22 +83,15 @@ class ContactUs(models.Model):
 
 #DONATION
 class Donation(models.Model):
-    z = (
-        ("Z", "Zones"),
-        ("M", "Mechi"), 
-        ("K", "Koshi"), 
-        ("S", "Sagarmatha"),
-        ("J", "Janapkur"), 
-        ("N", "Narayani"),  
-        ("B", "Bagmati"),
-        ("G", "Gandaki"), 
-        ("L", "Lumbini"), 
-        ("D", "Dhaulagiri"),
-        ("R", "Ratpi"), 
-        ("B", "Bheri"), 
-        ("K", "Karnali"),
-        ("S", "Seti"), 
-        ("M", "Mahakali"), 
+    pr = (
+        ("P", "Provinces"),
+        ("P1", "Province 1"),
+        ("P2", "Province 2"),
+        ("P3", "Province 3"),
+        ("P4", "Province 4"),
+        ("P5", "Province 5"),
+        ("P6", "Province 6"),
+        ("P7", "Province 7"),
     ) 
     p = (
         ('P', 'Purpose'),
@@ -117,14 +110,14 @@ class Donation(models.Model):
     country = models.CharField(max_length=100)  
     address = models.CharField(max_length=100, blank=True)
     city = models.CharField(max_length=100, blank=True)
-    zone = models.CharField(max_length=100, choices=z, default='Zone')
+    province = models.CharField(max_length=100, choices=pr, default='Province')
     purpose = models.CharField(max_length=9, choices=p, default='Purpose')
     # zip_regex = RegexValidator(regex=r'^\d{10}$', message="Phone number must be entered in the format: '98********'. Up to 10 digits allowed.")
     # zip = models.CharField(max_length=100, null=True)
     # slug = models.SlugField(max_length=255, null=True)
 
     def __str__(self):
-        return self.name+" "+self.email+" "+self.contact+" "+self.country+" "+self.address+" "+self.city+" "+self.zone+" "+self.purpose
+        return self.name+" "+self.email+" "+self.contact+" "+self.country+" "+self.address+" "+self.city+" "+self.province+" "+self.purpose
 
 #ACTIVITIES
 class Activities(models.Model):
