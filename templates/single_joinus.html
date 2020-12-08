@@ -14,7 +14,11 @@
         
         function hideURLbar() {
             window.scrollTo(0, 1);
-        }        
+        }   
+
+        if ( window.history.replaceState ) {
+            window.history.replaceState( null, null, window.location.href );
+        }      
         </script>
         {% if status %}
         <script>
@@ -103,13 +107,16 @@
                 <div class="form-container">
                     <div class="style-form">
                         <form action="" method="post">
-                            {% csrf_token  %}                           
+                            {% csrf_token  %}        
+                            <!-- name -->
                             <div class=" form-group contact-forms">
                                 <input type="text" class="form-control" placeholder="Name" name="name" required="">
                             </div>
+                            <!-- address -->
                             <div class=" form-group contact-forms">
                                 <input type="text" class="form-control" placeholder="Address" name="address" required="">
                             </div>
+                            <!-- gender -->
                             <div class="form-group contact-forms">
                                 <ul class="form-gender">
                                     <li>
@@ -126,16 +133,20 @@
                                     </li>                                
                                 </ul>                                                        
                             </div>
+                            <!-- email -->
                             <div class="form-group contact-forms">
                                 <input type="email" class="form-control" placeholder="Email (if any)" name="email">
                             </div>
+                            <!-- contact -->
                             <div class=" form-group contact-forms">
                                 <input type="tel" class="form-control" placeholder="Contact (if any)" name="contact" pattern="[0-9]{10}">
                             </div>
+                            <!-- time -->
                             <div class=" form-group contact-forms">
                             <input type="text" class="form-control" placeholder="Available at (Day) - (Time)" name="time" required="">
                             </div>
-                            <div class=" form-group contact-forms" id="card">
+                            <!-- card -->
+                            <div class=" form-group contact-forms" >
                                 <input type="file" class="form-control" placeholder="Valid ID Card" name="card" required="">
                             </div>
                            <button type="submit" class="btn sent-butnn">Join</button>

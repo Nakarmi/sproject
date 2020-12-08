@@ -44,9 +44,9 @@ class Volunteer(models.Model):
     address = models.CharField(max_length=100, null=True)
     gender = models.CharField(max_length=12, choices=g, null=True)
     email_regex = RegexValidator(regex=r'^[a-z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w{2,3}$', message="Email must be entered in the format: 'example@example.com'")
-    email = models.CharField(validators=[email_regex], max_length=100, null=True)
+    email = models.CharField(validators=[email_regex], max_length=100, null=True, blank=True)
     phone_regex = RegexValidator(regex=r'^\d{10}$', message="Phone number must be entered in the format: '98********'. Up to 10 digits allowed.")
-    contact = models.CharField(validators=[phone_regex], max_length=10, null=True)
+    contact = models.CharField(validators=[phone_regex], max_length=10, null=True, blank=True)
     time = models.CharField(max_length=75)
     status = models.BooleanField(null=True)
     joined_from = models.DateTimeField(auto_now_add=True)
@@ -54,7 +54,7 @@ class Volunteer(models.Model):
     # slug = models.SlugField(max_length=255, null=True)
 
     def __str__(self):
-        return self.name+" "+self.address+" "+self.gender+" "+self.email+" "+self.contact+" "+str(self.joined_from)+" "+str(self.status)
+        return self.name+" "+self.address+" "+self.gender+" "+str(self.email)+" "+str(self.contact)+" "+str(self.joined_from)+" "+str(self.status)
 
 #STATE
 class State(models.Model):
