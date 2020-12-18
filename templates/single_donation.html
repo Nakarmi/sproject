@@ -175,10 +175,12 @@
                             <!-- mode -->
                             <div class="form-group contact-forms">
                                 <select name="mode" id="mode" onchange="show(this)" required>
-                                    <option value="" selected>-- Payment Mode --</option>
+                                    <option value="" selected disabled="true">-- Payment Mode --</option>
                                     <option value="qrcode">QR Code</option>
                                     <option value="cheque">Cheque</option>
                                 </select>
+                                <!-- amount -->
+                                <input id="amount" type="number" class="form-control" placeholder="Amount (NRS)" name="amount" min="100" required="">
                             </div>  
                             <!-- qr_code -->
                             <div class="qrcode" id="qrcode">

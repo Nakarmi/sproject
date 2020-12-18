@@ -35,7 +35,7 @@
     margin-left: auto;
 }
 
-#province, #purpose, #mode{
+#province, #purpose, #mode, #amount{
     width: 47%;
     border: none;
     border-left: 2px solid #00b381;
@@ -47,7 +47,7 @@
     padding: .8em .7em;
 }
 
-#purpose {
+#purpose, #amount {
     float: right;
 }
 

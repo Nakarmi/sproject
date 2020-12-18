@@ -112,12 +112,13 @@ class Donation(models.Model):
     city = models.CharField(max_length=100, blank=True)
     province = models.CharField(max_length=100, choices=pr, default='Province')
     purpose = models.CharField(max_length=9, choices=p, default='Purpose')
+    amount = models.IntegerField(default=100)
     # zip_regex = RegexValidator(regex=r'^\d{10}$', message="Phone number must be entered in the format: '98********'. Up to 10 digits allowed.")
     # zip = models.CharField(max_length=100, null=True)
     # slug = models.SlugField(max_length=255, null=True)
 
     def __str__(self):
-        return self.name+" "+self.email+" "+self.contact+" "+self.country+" "+self.address+" "+self.city+" "+self.province+" "+self.purpose
+        return self.name+" "+self.email+" "+self.contact+" "+self.country+" "+self.address+" "+self.city+" "+self.province+" "+self.purpose+" "+str(self.amount)
 
 #ACTIVITIES
 class Activities(models.Model):

@@ -40,7 +40,7 @@ class ContactUsAdmin(admin.ModelAdmin):
 
 # Donation
 class DonationAdmin(admin.ModelAdmin):
-    list_display = ["id", "name", "contact", "job", "country", "province", "purpose"]
+    list_display = ["id", "name", "contact", "job", "country", "province", "purpose", "amount"]
     search_fields = ["name", "city", "purpose"]
     list_filter = ["province", "purpose", "job"]
     # list_editable = ["address"]
