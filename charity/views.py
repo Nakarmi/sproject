@@ -34,6 +34,12 @@ def SingleBlogView(request):
     template_name = "single_blog.html"
     return render(request, template_name, {'blog':blog})
 
+#blog_detail
+def BlogDetailView(request):
+    blog = Blog.objects.all().order_by('created_at').reverse()
+    template_name = "blog_detail.html"
+    return render(request, template_name, {'blog':blog})
+
 #single_gallery
 def SingleGalleryView(request):
     gallery = Gallery.objects.all().order_by('id').reverse()
@@ -81,9 +87,9 @@ def SingleDonationView(request):
         province = request.POST["province"]
         purpose = request.POST["purpose"]
         amount = request.POST["amount"]
-
+        mode = request.POST["mode"]
         data = Donation(name=uname,email=mail,contact=contact,job=job,country=country,address=add,city=city,
-                        province=province, purpose=purpose, amount=amount)
+                        province=province, purpose=purpose, mode=mode, amount=amount)
         data.save()
         res = "Dear {} Thankyou for your support".format(uname)
         return render(request,template_name,{"status":res})
@@ -95,3 +101,4 @@ def SingleSponsorView(request):
     sponsor = Sponsor.objects.all().order_by('age')
     template_name = "single_sponsor.html"
     return render(request, template_name, {'sponsor' : sponsor})
+

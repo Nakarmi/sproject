@@ -152,19 +152,19 @@
                             </div> 
                             <!-- province -->
                             <div class="form-group contact-forms">
-                                <select name="province" id="province">
-                                    <option value="province" selected disabled="true">-- Provinces --</option>
-                                    <option value="province1">Province 1</option>
-                                    <option value="province2">Province 2</option>
-                                    <option value="province3">Province 3</option>
-                                    <option value="province4">Province 4</option>
-                                    <option value="province5">Province 5</option>
-                                    <option value="province6">Province 6</option>
-                                    <option value="province7">Province 7</option>
+                                <select name="province" id="province" required="">
+                                    <option value="" selected disabled="true">-- Provinces --</option>
+                                    <option value="province1" name="province1">Province 1</option>
+                                    <option value="province2" name="province2">Province 2</option>
+                                    <option value="province3" name="province3">Province 3</option>
+                                    <option value="province4" name="province4">Province 4</option>
+                                    <option value="province5" name="province5">Province 5</option>
+                                    <option value="province6" name="province6">Province 6</option>
+                                    <option value="province7" name="province7">Province 7</option>
                                 </select>
                                 <!-- purpose -->
-                                <select name="purpose" id="purpose">
-                                    <option value="purposes" selected disabled="true">-- Purposes --</option>
+                                <select name="purpose" id="purpose" required="">
+                                    <option value="" selected disabled="true">-- Purposes --</option>
                                     <option value="food">Food</option>
                                     <option value="education">Education</option>
                                     <option value="clothing">Clothing</option>
@@ -174,7 +174,7 @@
                             </div>  
                             <!-- mode -->
                             <div class="form-group contact-forms">
-                                <select name="mode" id="mode" onchange="show(this)" required>
+                                <select name="mode" id="mode" onchange="show(this)" required="">
                                     <option value="" selected disabled="true">-- Payment Mode --</option>
                                     <option value="qrcode">QR Code</option>
                                     <option value="cheque">Cheque</option>

@@ -117,14 +117,14 @@
                                     <img src="{{ i.cover_image.url }}" alt="The Beginning" />                            
                                 </div>
                                 <div  class="blog_title">
-                                    <span>{{i.title}}</span>
+                                    <span>{{i.title}}{{i.id}}</span>
                                 </div>
                                 <div  class="created_at">
                                     <span>{{i.created_at}}</span>                                    
                                 </div> 
                                 <div class="content_1">
                                     {{i.content|truncatechars:55}}
-                                    <a href="#" style="color: #000000;">Read more</a>
+                                    <a href="{% url 'blog_detail' %}" style="color: #000000;">Read more</a>
                                 </div>
                                 <div>
                                     <span class="author">-{{i.author}}</span>

@@ -8,6 +8,7 @@ from django.core.validators import RegexValidator
 
 #BLOG
 class Blog(models.Model):
+    id = models.IntegerField(primary_key='True', default=0)
     title = models.CharField(max_length=255)
     content = models.TextField()
     # count = models.IntegerField(default=0)
@@ -93,13 +94,18 @@ class Donation(models.Model):
         ("P6", "Province 6"),
         ("P7", "Province 7"),
     ) 
-    p = (
+    pu = (
         ('P', 'Purpose'),
         ('f', 'Food'),
         ('e', 'Education'),
         ('c', 'Clothing'),
         ('h', 'Health'),
         ('s', 'Shelter'),
+    )
+    m = (
+        ('m', 'mode'),
+        ('q', 'QR Code'),
+        ('c', 'Cheque'),
     )
     name = models.CharField(max_length=255)    
     email_regex = RegexValidator(regex=r'^[a-z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w{2,3}$', message="Email must be entered in the format: 'example@example.com'")
@@ -111,14 +117,14 @@ class Donation(models.Model):
     address = models.CharField(max_length=100, blank=True)
     city = models.CharField(max_length=100, blank=True)
     province = models.CharField(max_length=100, choices=pr, default='Province')
-    purpose = models.CharField(max_length=9, choices=p, default='Purpose')
+    purpose = models.CharField(max_length=9, choices=pu, default='Purpose')
+    mode = models.CharField(max_length=9, choices=m, default='mode')
     amount = models.IntegerField(default=100)
     # zip_regex = RegexValidator(regex=r'^\d{10}$', message="Phone number must be entered in the format: '98********'. Up to 10 digits allowed.")
     # zip = models.CharField(max_length=100, null=True)
-    # slug = models.SlugField(max_length=255, null=True)
 
     def __str__(self):
-        return self.name+" "+self.email+" "+self.contact+" "+self.country+" "+self.address+" "+self.city+" "+self.province+" "+self.purpose+" "+str(self.amount)
+        return self.name+" "+self.email+" "+self.contact+" "+self.country+" "+self.address+" "+self.city+" "+self.province+" "+self.purpose+" "+self.mode+" "+str(self.amount)
 
 #ACTIVITIES
 class Activities(models.Model):
