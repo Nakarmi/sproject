@@ -68,7 +68,7 @@ def ContactUsView(request):
 
         data = ContactUs(name=name,email=mail,contact=contact,message=msg)
         data.save()
-        res = "Dear {} Thankyou for supporting us.".format(name)
+        res = "Dear {} Thankyou for your concern.".format(name)
         return render(request,template_name,{"status":res})
         # return HttpResponse
     return render(request, template_name)

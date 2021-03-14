@@ -85,7 +85,7 @@ class ContactUs(models.Model):
 #DONATION
 class Donation(models.Model):
     pr = (
-        ("P", "Provinces"),
+        # ("P", "Provinces"),
         ("P1", "Province 1"),
         ("P2", "Province 2"),
         ("P3", "Province 3"),
@@ -95,7 +95,7 @@ class Donation(models.Model):
         ("P7", "Province 7"),
     ) 
     pu = (
-        ('P', 'Purpose'),
+        # ('P', 'Purpose'),
         ('f', 'Food'),
         ('e', 'Education'),
         ('c', 'Clothing'),
@@ -103,7 +103,7 @@ class Donation(models.Model):
         ('s', 'Shelter'),
     )
     m = (
-        ('m', 'mode'),
+        # ('m', 'mode'),
         ('q', 'QR Code'),
         ('c', 'Cheque'),
     )
@@ -116,9 +116,9 @@ class Donation(models.Model):
     country = models.CharField(max_length=100)  
     address = models.CharField(max_length=100, blank=True)
     city = models.CharField(max_length=100, blank=True)
-    province = models.CharField(max_length=100, choices=pr, default='Province')
-    purpose = models.CharField(max_length=9, choices=pu, default='Purpose')
-    mode = models.CharField(max_length=9, choices=m, default='mode')
+    province = models.CharField(max_length=100, choices=pr)
+    purpose = models.CharField(max_length=9, choices=pu)
+    mode = models.CharField(max_length=9, choices=m)
     amount = models.IntegerField(default=100)
     # zip_regex = RegexValidator(regex=r'^\d{10}$', message="Phone number must be entered in the format: '98********'. Up to 10 digits allowed.")
     # zip = models.CharField(max_length=100, null=True)
