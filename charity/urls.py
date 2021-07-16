@@ -11,7 +11,6 @@ urlpatterns = [
    path("single_donation", views.SingleDonationView, name="single_donation"),
    path("partials/contact", views.ContactUsView, name="contact"),
    path("single_sponsor", views.SingleSponsorView, name="single_sponsor"),
-   # path("blog_detail", views.BlogDetailView, name="blog_detail"),
    path("blog_detail/<int:id>", views.BlogDetailView, name="blog_detail"),
 ]
  
