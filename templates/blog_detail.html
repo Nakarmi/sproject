@@ -1,98 +1,99 @@
-
-
 <!DOCTYPE html>
+
 <html lang="zxx">
-    <head>
+
+<head>
     <title>खुशीको सृजना | Creation of happiness - Charity</title>
-        <!--meta tags -->
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="keywords" content="Oblige Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+    <!--meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Oblige Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
         Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-        <script>
-        addEventListener("load", function () {
+    <script>
+        addEventListener("load", function() {
             setTimeout(hideURLbar, 0);
         }, false);
-        
+
         function hideURLbar() {
             window.scrollTo(0, 1);
         }
 
-        if ( window.history.replaceState ) {
-            window.history.replaceState( null, null, window.location.href );
+        if (window.history.replaceState) {
+            window.history.replaceState(null, null, window.location.href);
         }
-        </script>
-        <!--//meta tags ends here-->
-        <!--booststrap-->
-        <link href="../static/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
-        <!--//booststrap end-->
-        <!-- font-awesome icons -->
-        <link href="../static/css/font-awesome.min.css" rel="stylesheet">
-        <!-- //font-awesome icons -->
-        <!--stylesheets-->
-        <link href="../static/css/style.css" rel='stylesheet' type='text/css' media="all">
-        <link href="../static/css/blog.css" rel='stylesheet' type='text/css' media="all">
-        <!--//stylesheets-->
-        <link rel="icon" href="../static/images/title.png" type="images/jpg" sizes="12x12">
-        <link href="//fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700" rel="stylesheet">
-        <link href="//fonts.googleapis.com/css?family=Oxygen:400,700" rel="stylesheet">
-    </head>
-    <body>
-        <!--header-->
-        <div class="main-top" id="home">
-            <!-- header -->
-            <div class="headder-top">
-                <div class="container-fluid">
-                    <!-- nav -->
-                    <nav >
-                       <div id="logo">
-                          <h1><a class="title" href="{% url 'home' %}">खुशीको सृजना<span id="tagline">Creation of happiness, Charity</span></a></h1>
-                       </div>
-                       <label for="drop" class="toggle">Menu</label>
-                       <input type="checkbox" id="drop">
-                       <ul class="menu mt-2">
-                          <li class="mx-lg-3 mx-md-2 my-md-0 my-1"><a href="{% url 'home' %}">Home</a></li>
-                          <!-- Service -->
-                          <li class="mx-lg-3 mx-md-2 my-md-0 my-1">
+    </script>
+    <!--//meta tags ends here-->
+    <!--booststrap-->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
+    <!--//booststrap end-->
+    <!-- font-awesome icons -->
+    <link href="../static/css/font-awesome.min.css" rel="stylesheet">
+    <!-- //font-awesome icons -->
+    <!--stylesheets-->
+    <link href="../static/css/style.css" rel='stylesheet' type='text/css' media="all">
+    <link href="../static/css/blog.css" rel='stylesheet' type='text/css' media="all">
+    <!--//stylesheets-->
+    <link rel="icon" href="../static/images/title.png" type="images/jpg" sizes="12x12">
+    <link href="//fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Oxygen:400,700" rel="stylesheet">
+</head>
+
+<body>
+    <!--header-->
+    <div class="main-top" id="home">
+        <!-- header -->
+        <div class="headder-top">
+            <div class="container-fluid">
+                <!-- nav -->
+                <nav>
+                    <div id="logo">
+                        <h1><a class="title" href="{% url 'home' %}">खुशीको सृजना<span id="tagline">Creation of happiness, Charity</span></a></h1>
+                    </div>
+                    <label for="drop" class="toggle">Menu</label>
+                    <input type="checkbox" id="drop">
+                    <ul class="menu mt-2">
+                        <li class="mx-lg-3 mx-md-2 my-md-0 my-1"><a href="{% url 'home' %}">Home</a></li>
+                        <!-- Service -->
+                        <li class="mx-lg-3 mx-md-2 my-md-0 my-1">
                             <!-- First Tier Drop Down -->
-                           <a href="#">Services <span class="fa fa-angle-down" aria-hidden="true"></span></a>
-                           <input type="checkbox" id="drop-2">
-                           <ul>
-                              <!-- <li><a href="#team" class="drop-text">Founders</a></li> -->
-                              <li><a href="{% url 'single_donation' %}" class="drop-text">Donation</a></li>
-                              <li><a href="{% url 'single_joinus' %}" class="drop-text">Volunteer</a></li>
-                              <li><a href="{% url 'single_humanright' %}" class="drop-text">Human Rights</a></li>
-                              <li><a href="{% url 'single_sponsor' %}" class="drop-text">Sponsor</a></li>
-                           </ul>
-                          </li>
-                          <!-- //Service -->
-                          <!-- More -->
-                          <li class="mx-lg-3 mx-md-2 my-md-0 my-1">
-                             <!-- First Tier Drop Down -->
-                             <a href="#">More <span class="fa fa-angle-down" aria-hidden="true"></span></a>
-                             <input type="checkbox" id="drop-2">
-                             <ul>
+                            <a href="#">Services <span class="fa fa-angle-down" aria-hidden="true"></span></a>
+                            <input type="checkbox" id="drop-2">
+                            <ul>
+                                <!-- <li><a href="#team" class="drop-text">Founders</a></li> -->
+                                <li><a href="{% url 'single_donation' %}" class="drop-text">Donation</a></li>
+                                <li><a href="{% url 'single_joinus' %}" class="drop-text">Volunteer</a></li>
+                                <li><a href="{% url 'single_humanright' %}" class="drop-text">Human Rights</a></li>
+                                <li><a href="{% url 'single_sponsor' %}" class="drop-text">Sponsor</a></li>
+                            </ul>
+                        </li>
+                        <!-- //Service -->
+                        <!-- More -->
+                        <li class="mx-lg-3 mx-md-2 my-md-0 my-1">
+                            <!-- First Tier Drop Down -->
+                            <a href="#">More <span class="fa fa-angle-down" aria-hidden="true"></span></a>
+                            <input type="checkbox" id="drop-2">
+                            <ul>
                                 <!-- <li><a href="#team" class="drop-text">Founders</a></li> -->
                                 <li><a href="{% url 'single_gallery' %}" class="drop-text">Gallery</a></li>
                                 <li><a href="{% url 'single_blog' %}" class="drop-text">Blog</a></li>
-                             </ul>
-                          </li>
-                          <!-- //More -->
-                          <li class="mx-lg-3 mx-md-2 my-md-0 my-1"><a href="{% url 'single_about' %}">About Us</a></li>
-                          <li><a href="#contactus">Contact Us</a></li>
-                          <li><a href="{% url 'single_joinus' %}">Join Us</a></li>
-                       </ul>
-                    </nav>
-                    <!-- //nav -->
-                 </div>              
+                            </ul>
+                        </li>
+                        <!-- //More -->
+                        <li class="mx-lg-3 mx-md-2 my-md-0 my-1"><a href="{% url 'single_about' %}">About Us</a></li>
+                        <li><a href="#contactus">Contact Us</a></li>
+                        <li><a href="{% url 'single_joinus' %}">Join Us</a></li>
+                    </ul>
+                </nav>
+                <!-- //nav -->
             </div>
-            <!-- //header -->
-            <!-- banner -->
-            <div class="main-banner">
-                <div class="style-banner ">
-                    <h4 class="mb-1">Blogs</h4>  
-                </div>                                       
-                    <!-- <div class="row"> 
+        </div>
+        <!-- //header -->
+        <!-- banner -->
+        <div class="main-banner">
+            <div class="style-banner ">
+                <h4 class="mb-1">Blogs</h4>
+            </div>
+            <!-- <div class="row"> 
                         {% for i in blog %}  
                         <div class="cover_image">
                             <img src="{{ i.cover_image.url }}" alt="The Beginning" />
@@ -112,77 +113,77 @@
                         </div>
                         {% endfor %}
                     </div>                                                                -->
-                    <div class="row">
-                        {% for i in blog %} 
-                            <div class="margin_b">
-                                <div class="cover_image">                         
-                                    <img src="{{ i.cover_image.url }}" alt="The Beginning" />                            
-                                </div>
-                                <div  class="blog_title">
-                                    <span>{{i.title}}{{i.id}}</span>
-                                </div>
-                                <div  class="created_at">
-                                    <span>{{i.created_at}}</span>                                    
-                                </div> 
-                                <div class="content_1">
-                                    {{i.content|truncatechars:55}}
-                                    <a href="{% url 'blog_detail' %}" style="color: #000000;">Read more</a>
-                                </div>
-                                <div>
-                                    <span class="author">-{{i.author}}</span>
-                                </div>
-                            </div>                            
-                        {% endfor %}
-                    </div>                
+            <div class="row">
+                {% for i in blog %}
+                <div class="margin_b">
+                    <div class="cover_image">
+                        <img src="{{ i.cover_image.url }}" alt="The Beginning" />
+                    </div>
+                    <div class="blog_title">
+                        <span>{{i.title}}{{i.id}}</span>
+                    </div>
+                    <div class="created_at">
+                        <span>{{i.content}}</span>
+                    </div>
+                    <div class="created_at">
+                        <span>{{i.created_at}}</span>
+                    </div>
+                    <div>
+                        <span class="author">-{{i.author}}</span>
+                    </div>
+                </div>
+                {% endfor %}
             </div>
-            <!-- //banner -->
         </div>
-        <!--//header-->
-        <!-- Location -->
-        <div class="address_mail_footer_grids">
-            <iframe src="https://maps.google.com/maps?q=orchid%20international%20college&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
-        </div>
-        <!-- //Location -->
+        <!-- //banner -->
+    </div>
+    <!--//header-->
+    <!-- Location -->
+    <div class="address_mail_footer_grids">
+        <iframe src="https://maps.google.com/maps?q=orchid%20international%20college&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+    </div>
+    <!-- //Location -->
 
-        <!-- footer -->
-        <footer class=" py-3" id="contactus">
-            <div class="icons mt-3 text-center">
-                <ul class="d-flex justify-content-center pb-3 social-icons">
-                   <li>
-                      <a href="#">
-                      <span class="fa fa-facebook-f"></span>
-                      </a>
-                   </li>
-                   <li class="mx-3">
-                      <a href="#">
-                      <span class="fa fa-twitter"></span>
-                      </a>
-                   </li>
-                   <li class="mr-3">
-                      <a href="#">
-                      <span class="fa fa-google"></span>
-                      </a>
-                   </li>
-                   <li><a href="#"><span class="fa fa-vk"></span></a></li>
-                </ul>
+    <!-- footer -->
+    <footer class=" py-3" id="contactus">
+        <div class="icons mt-3 text-center">
+            <ul class="d-flex justify-content-center pb-3 social-icons">
+                <li>
+                    <a href="#">
+                        <span class="fa fa-facebook-f"></span>
+                    </a>
+                </li>
+                <li class="mx-3">
+                    <a href="#">
+                        <span class="fa fa-twitter"></span>
+                    </a>
+                </li>
+                <li class="mr-3">
+                    <a href="#">
+                        <span class="fa fa-google"></span>
+                    </a>
+                </li>
+                <li><a href="#"><span class="fa fa-vk"></span></a></li>
+            </ul>
+        </div>
+        <div class="footer-main txt-center">
+            <div class=" footer-contact-list mb-2">
+                <a href="tel:+9779861112142">+977 986-1112142</a>
             </div>
-            <div class="footer-main txt-center">
-                <div class=" footer-contact-list mb-2">
-                    <a href="tel:+9779861112142">+977 986-1112142</a>
-                </div>
-                <div class=" footer-contact-list mb-2">
-                    <p><a href="mailto:bpin.nakarmi77@gmail.com" style="font-style:italic;">bpin.nakarmi77@gmail.com</a></p>
-                </div>
-                <p> 
-                    © 2020 Summer Project. <a href="{% url 'home' %}">खुशीको सृजना | Creation of happiness, Charity</a>
-                </p>
+            <div class=" footer-contact-list mb-2">
+                <p><a href="mailto:bpin.nakarmi77@gmail.com" style="font-style:italic;">bpin.nakarmi77@gmail.com</a></p>
             </div>
-            <!-- move icon -->
-            <div class="txt-center">
-                <a href="#home" class="move-top txt-center mt-3"></a>
-            </div>
-            <!--//move icon -->
-        </footer>
-        <!--//footer -->
-    </body>
+            <p>
+                © 2020 Summer Project. <a href="{% url 'home' %}">खुशीको सृजना | Creation of happiness, Charity</a>
+            </p>
+        </div>
+        <!-- move icon -->
+        <div class="txt-center">
+            <a href="#home" class="move-top txt-center mt-3"></a>
+        </div>
+        <!--//move icon -->
+    </footer>
+    <!--//footer -->
+</body>
+
 </html>

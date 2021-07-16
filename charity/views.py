@@ -34,9 +34,9 @@ def SingleBlogView(request):
     template_name = "single_blog.html"
     return render(request, template_name, {'blog':blog})
 
-#blog_detail
-def BlogDetailView(request):
-    blog = Blog.objects.all().order_by('created_at').reverse()
+#blog_demo
+def BlogDetailView(request,id):
+    blog = Blog.objects.filter(id=id)
     template_name = "blog_detail.html"
     return render(request, template_name, {'blog':blog})
 

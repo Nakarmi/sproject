@@ -1,169 +1,171 @@
 <!DOCTYPE html>
 <html lang="zxx">
-    <head>
+
+<head>
     <title>खुशीको सृजना | Creation of happiness - Charity</title>
-        <!--meta tags -->
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="keywords" content="Oblige Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+    <!--meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Oblige Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
         Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-        <script>
-        addEventListener("load", function () {
+    <script>
+        addEventListener("load", function() {
             setTimeout(hideURLbar, 0);
         }, false);
-        
+
         function hideURLbar() {
             window.scrollTo(0, 1);
-        }    
+        }
 
-        if ( window.history.replaceState ) {
-            window.history.replaceState( null, null, window.location.href );
-        }   
+        if (window.history.replaceState) {
+            window.history.replaceState(null, null, window.location.href);
+        }
 
         function show(select) {
-            if(select.value=='qrcode'){
+            if (select.value == 'qrcode') {
                 document.getElementById('qrcode').style.display = "block";
                 document.getElementById('cheque').style.display = "none";
-            } else if(select.value=='cheque'){
+            } else if (select.value == 'cheque') {
                 document.getElementById('qrcode').style.display = "none";
                 document.getElementById('cheque').style.display = "block";
             } else {
                 document.getElementById('qrcode').style.display = "none";
                 document.getElementById('cheque').style.display = "none";
             }
-        } 
-        </script>
-        {% if status %}
-        <script>
-            alert("{{status}}");
-        </script>        
-        {% endif %}
-        <!--//meta tags ends here-->
-        <!--booststrap-->
-        <link href="../static/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
-        <!--//booststrap end-->
-        <!-- font-awesome icons -->
-        <link href="../static/css/font-awesome.min.css" rel="stylesheet">
-        <!-- //font-awesome icons -->
-        <!--stylesheets-->
-        <link href="../static/css/style.css" rel='stylesheet' type='text/css' media="all">
-        <link href="../static/css/donation.css" rel='stylesheet' type='text/css' media="all">
-        <!--//stylesheets-->
-        <link rel="icon" href="../static/images/title.png" type="images/jpg" sizes="12x12">
-        <link href="//fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700" rel="stylesheet">
-        <link href="//fonts.googleapis.com/css?family=Oxygen:400,700" rel="stylesheet">
-    </head>
-    <body>
-        <!--header-->
-        <div class="main-top" id="home">
-            <!-- header -->
-            <div class="headder-top">
-                <div class="container-fluid">
-                    <!-- nav -->
-                    <nav >
-                       <div id="logo">
-                          <h1><a class="title" href="{% url 'home' %}">खुशीको सृजना<span id="tagline">Creation of happiness, Charity</span></a></h1>
-                       </div>
-                       <label for="drop" class="toggle">Menu</label>
-                       <input type="checkbox" id="drop">
-                       <ul class="menu mt-2">
-                          <li class="mx-lg-3 mx-md-2 my-md-0 my-1"><a href="{% url 'home' %}">Home</a></li>
-                          <!-- Service -->
-                          <li class="mx-lg-3 mx-md-2 my-md-0 my-1">
+        }
+    </script>
+    {% if status %}
+    <script>
+        alert("{{status}}");
+    </script>
+    {% endif %}
+    <!--//meta tags ends here-->
+    <!--booststrap-->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
+    <!--//booststrap end-->
+    <!-- font-awesome icons -->
+    <link href="../static/css/font-awesome.min.css" rel="stylesheet">
+    <!-- //font-awesome icons -->
+    <!--stylesheets-->
+    <link href="../static/css/style.css" rel='stylesheet' type='text/css' media="all">
+    <link href="../static/css/donation.css" rel='stylesheet' type='text/css' media="all">
+    <!--//stylesheets-->
+    <link rel="icon" href="../static/images/title.png" type="images/jpg" sizes="12x12">
+    <link href="//fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Oxygen:400,700" rel="stylesheet">
+</head>
+
+<body>
+    <!--header-->
+    <div class="main-top" id="home">
+        <!-- header -->
+        <div class="headder-top">
+            <div class="container-fluid">
+                <!-- nav -->
+                <nav>
+                    <div id="logo">
+                        <h1><a class="title" href="{% url 'home' %}">खुशीको सृजना<span id="tagline">Creation of happiness, Charity</span></a></h1>
+                    </div>
+                    <label for="drop" class="toggle">Menu</label>
+                    <input type="checkbox" id="drop">
+                    <ul class="menu mt-2">
+                        <li class="mx-lg-3 mx-md-2 my-md-0 my-1"><a href="{% url 'home' %}">Home</a></li>
+                        <!-- Service -->
+                        <li class="mx-lg-3 mx-md-2 my-md-0 my-1">
                             <!-- First Tier Drop Down -->
-                           <a href="#">Services <span class="fa fa-angle-down" aria-hidden="true"></span></a>
-                           <input type="checkbox" id="drop-2">
-                           <ul>
-                              <!-- <li><a href="#team" class="drop-text">Founders</a></li> -->
-                              <li><a href="{% url 'single_donation' %}" class="drop-text">Donation</a></li>
-                              <li><a href="{% url 'single_joinus' %}" class="drop-text">Volunteer</a></li>
-                              <li><a href="{% url 'single_humanright' %}" class="drop-text">Human Rights</a></li>
-                              <li><a href="{% url 'single_sponsor' %}" class="drop-text">Sponsor</a></li>
-                           </ul>
-                          </li>
-                          <!-- //Service -->
-                          <!-- More -->
-                          <li class="mx-lg-3 mx-md-2 my-md-0 my-1">
-                             <!-- First Tier Drop Down -->
-                             <a href="#">More <span class="fa fa-angle-down" aria-hidden="true"></span></a>
-                             <input type="checkbox" id="drop-2">
-                             <ul>
+                            <a href="#">Services <span class="fa fa-angle-down" aria-hidden="true"></span></a>
+                            <input type="checkbox" id="drop-2">
+                            <ul>
+                                <!-- <li><a href="#team" class="drop-text">Founders</a></li> -->
+                                <li><a href="{% url 'single_donation' %}" class="drop-text">Donation</a></li>
+                                <li><a href="{% url 'single_joinus' %}" class="drop-text">Volunteer</a></li>
+                                <li><a href="{% url 'single_humanright' %}" class="drop-text">Human Rights</a></li>
+                                <li><a href="{% url 'single_sponsor' %}" class="drop-text">Sponsor</a></li>
+                            </ul>
+                        </li>
+                        <!-- //Service -->
+                        <!-- More -->
+                        <li class="mx-lg-3 mx-md-2 my-md-0 my-1">
+                            <!-- First Tier Drop Down -->
+                            <a href="#">More <span class="fa fa-angle-down" aria-hidden="true"></span></a>
+                            <input type="checkbox" id="drop-2">
+                            <ul>
                                 <!-- <li><a href="#team" class="drop-text">Founders</a></li> -->
                                 <li><a href="{% url 'single_gallery' %}" class="drop-text">Gallery</a></li>
                                 <li><a href="{% url 'single_blog' %}" class="drop-text">Blog</a></li>
-                             </ul>
-                          </li>
-                          <!-- //More -->
-                          <li class="mx-lg-3 mx-md-2 my-md-0 my-1"><a href="{% url 'single_about' %}">About Us</a></li>
-                          <li><a href="#contactus">Contact Us</a></li>
-                          <li><a href="{% url 'single_joinus' %}">Join Us</a></li>
-                       </ul>
-                    </nav>
-                    <!-- //nav -->
-                 </div>              
+                            </ul>
+                        </li>
+                        <!-- //More -->
+                        <li class="mx-lg-3 mx-md-2 my-md-0 my-1"><a href="{% url 'single_about' %}">About Us</a></li>
+                        <li><a href="#contactus">Contact Us</a></li>
+                        <li><a href="{% url 'single_joinus' %}">Join Us</a></li>
+                    </ul>
+                </nav>
+                <!-- //nav -->
             </div>
-            <!-- //header -->
+        </div>
+        <!-- //header -->
 
-            <!-- banner -->
-            <div class="main-banner">
-                <div class="container">
-                    <div class="form-banner ">
-                       <h4 class="mb-1">Join Hands For a Better World</h4>
-                       <h5>Every donation helps change the life of a child in need. Fill out the form below to make your 100% tax-deductible gift.</h5>
-                    </div>
+        <!-- banner -->
+        <div class="main-banner">
+            <div class="container">
+                <div class="form-banner ">
+                    <h4 class="mb-1">Join Hands For a Better World</h4>
+                    <h5>Every donation helps change the life of a child in need. Fill out the form below to make your 100% tax-deductible gift.</h5>
                 </div>
             </div>
-            <!-- //banner -->
+        </div>
+        <!-- //banner -->
 
-            <!-- Form -->
-            <div class="formv">
-                <div class="form-container">
-                    <div class="style-form">
-                        <form action="" method="post">
-                            {% csrf_token  %}         
-                            <!-- name -->
-                            <div class=" form-group contact-forms">
-                                <input type="text" class="form-control" placeholder="Contributors' Name" name="name" required="">
+        <!-- Form -->
+        <div class="formv">
+            <div class="form-container">
+                <div class="style-form">
+                    <form action="" method="post">
+                        {% csrf_token %}
+                        <!-- name -->
+                        <div class=" form-group contact-forms">
+                            <input type="text" class="form-control" placeholder="Contributors' Name" name="name" required="">
+                        </div>
+                        <!-- email -->
+                        <div class="form-group contact-forms">
+                            <input type="email" class="form-control" placeholder="Email (if any)" name="email">
+                        </div>
+                        <!-- contact -->
+                        <div class=" form-group contact-forms">
+                            <input type="tel" class="form-control" placeholder="Contact (if any)" name="contact" pattern="[0-9]{10}">
+                        </div>
+                        <!-- Occupation -->
+                        <div class=" form-group contact-forms">
+                            <input type="text" class="form-control" placeholder="Occupation" name="job" required="">
+                        </div>
+                        <!-- country -->
+                        <div class="form-group contact-forms">
+                            <input type="text" class="form-control" placeholder="Country" name="country" required="">
+                        </div>
+                        <!-- address -->
+                        <div class=" form-group contact-forms">
+                            <div class="address">
+                                <input type="text" class="form-control" placeholder="Current Address (Opt.)" name="address">
                             </div>
-                            <!-- email -->
-                            <div class="form-group contact-forms">
-                                <input type="email" class="form-control" placeholder="Email (if any)" name="email">
+                            <div class="city">
+                                <input type="text" class="form-control" placeholder="City (Opt.)" name="city">
                             </div>
-                            <!-- contact -->
-                            <div class=" form-group contact-forms">
-                                <input type="tel" class="form-control" placeholder="Contact (if any)" name="contact" pattern="[0-9]{10}">
-                            </div>
-                            <!-- Occupation -->
-                            <div class=" form-group contact-forms">
-                                <input type="text" class="form-control" placeholder="Occupation" name="job" required="">
-                            </div>
-                            <!-- country -->
-                            <div class="form-group contact-forms">
-                                <input type="text" class="form-control" placeholder="Country" name="country" required="">
-                            </div> 
-                            <!-- address -->
-                            <div class=" form-group contact-forms">
-                                <div class="address">
-                                    <input type="text" class="form-control" placeholder="Current Address (Opt.)" name="address">    
-                                </div> 
-                                <div class="city" >
-                                    <input type="text" class="form-control" placeholder="City (Opt.)" name="city">
-                                </div>                                                                                               
-                            </div> 
-                            <!-- province -->
-                            <div class="form-group contact-forms">
-                                <select name="province" id="province" required="">
+                        </div>
+                        <!-- province -->
+                        <div class="form-group contact-forms">
+                            <select name="province" id="province" required="">
                                     <option value="" selected disabled="true">-- Provinces --</option>
-                                    <option value="province1" name="province1">Province 1</option>
-                                    <option value="province2" name="province2">Province 2</option>
-                                    <option value="province3" name="province3">Province 3</option>
-                                    <option value="province4" name="province4">Province 4</option>
-                                    <option value="province5" name="province5">Province 5</option>
-                                    <option value="province6" name="province6">Province 6</option>
-                                    <option value="province7" name="province7">Province 7</option>
+                                    <option value="province1" name="province">Province 1</option>
+                                    <option value="province2" name="province">Province 2</option>
+                                    <option value="province3" name="province">Province 3</option>
+                                    <option value="province4" name="province">Province 4</option>
+                                    <option value="province5" name="province">Province 5</option>
+                                    <option value="province6" name="province">Province 6</option>
+                                    <option value="province7" name="province">Province 7</option>
                                 </select>
-                                <!-- purpose -->
-                                <select name="purpose" id="purpose" required="">
+                            <!-- purpose -->
+                            <select name="purpose" id="purpose" required="">
                                     <option value="" selected disabled="true">-- Purposes --</option>
                                     <option value="food">Food</option>
                                     <option value="education">Education</option>
@@ -171,93 +173,95 @@
                                     <option value="health">Health</option>
                                     <option value="shelter">Shelter</option>
                                 </select>
-                            </div>  
-                            <!-- mode -->
-                            <div class="form-group contact-forms">
-                                <select name="mode" id="mode" onchange="show(this)" required="">
+                        </div>
+                        <!-- mode -->
+                        <div class="form-group contact-forms">
+                            <select name="mode" id="mode" onchange="show(this)" required="">
                                     <option value="" selected disabled="true">-- Payment Mode --</option>
                                     <option value="qrcode">QR Code</option>
                                     <option value="cheque">Cheque</option>
                                 </select>
-                                <!-- amount -->
-                                <input id="amount" type="number" class="form-control" placeholder="Amount (NRS)" name="amount" min="100" required="">
-                            </div>  
-                            <!-- qr_code -->
-                            <div class="qrcode" id="qrcode">
-                                <img src="../static/images/qqrcode.png" alt="QR" >
-                                <span class="qrtext">
+                            <!-- amount -->
+                            <input id="amount" type="number" class="form-control" placeholder="Amount (NRS)" name="amount" min="100" required="">
+                        </div>
+                        <!-- qr_code -->
+                        <div class="qrcode" id="qrcode">
+                            <img src="../static/images/qqrcode.png" alt="QR">
+                            <span class="qrtext">
                                     *Scan to donate.
-                                </span>                                
-                            </div>    
-                            <!-- or -->
-                            <!-- <div class="or">
+                                </span>
+                        </div>
+                        <!-- or -->
+                        <!-- <div class="or">
                                 OR
                             </div> -->
-                            <!-- cheque -->
-                            <div class="cheque" id="cheque">
-                                *Your sponsorship will begin once the first payment has been received in our office. 
-                                Please mail your payment to the office address below. (Incase you are donating from cheque).
-                                <p class="cheque_mail">
-                                    <b>Bank: </b><emphasize>ABC Bank Ltd.</emphasize><br>
-                                    <b>Account no.: </b><emphasize>156-156-78979</emphasize><br>
-                                    <a href="mailto:bpin.nakarmi77@gmail.com">bpin.nakarmi77@gmail.com</a>
-                                </p>
-                            </div>
-                           <button type="submit" class="btn sent-butnn">Donate</button>
-                        </form>
-                    </div>                    
+                        <!-- cheque -->
+                        <div class="cheque" id="cheque">
+                            *Your sponsorship will begin once the first payment has been received in our office. Please mail your payment to the office address below. (Incase you are donating from cheque).
+                            <p class="cheque_mail">
+                                <b>Bank: </b>
+                                <emphasize>ABC Bank Ltd.</emphasize><br>
+                                <b>Account no.: </b>
+                                <emphasize>156-156-78979</emphasize><br>
+                                <a href="mailto:bpin.nakarmi77@gmail.com">bpin.nakarmi77@gmail.com</a>
+                            </p>
+                        </div>
+                        <button type="submit" class="btn sent-butnn">Donate</button>
+                    </form>
                 </div>
             </div>
-            <!-- //Form -->
-
         </div>
-        <!--//header-->
+        <!-- //Form -->
 
-        <!-- Location -->
-        <div class="address_mail_footer_grids">
-            <iframe src="https://maps.google.com/maps?q=orchid%20international%20college&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+    </div>
+    <!--//header-->
+
+    <!-- Location -->
+    <div class="address_mail_footer_grids">
+        <iframe src="https://maps.google.com/maps?q=orchid%20international%20college&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+    </div>
+    <!-- //Location -->
+
+    <!-- footer -->
+    <footer class=" py-3" id="contactus">
+        <div class="icons mt-3 text-center">
+            <ul class="d-flex justify-content-center pb-3 social-icons">
+                <li>
+                    <a href="#">
+                        <span class="fa fa-facebook-f"></span>
+                    </a>
+                </li>
+                <li class="mx-3">
+                    <a href="#">
+                        <span class="fa fa-twitter"></span>
+                    </a>
+                </li>
+                <li class="mr-3">
+                    <a href="#">
+                        <span class="fa fa-google"></span>
+                    </a>
+                </li>
+                <li><a href="#"><span class="fa fa-vk"></span></a></li>
+            </ul>
         </div>
-        <!-- //Location -->
+        <div class="footer-main txt-center">
+            <div class=" footer-contact-list mb-2">
+                <a href="tel:+9779861112142">+977 986-1112142</a>
+            </div>
+            <div class=" footer-contact-list mb-2">
+                <p><a href="mailto:bpin.nakarmi77@gmail.com" style="font-style:italic;">bpin.nakarmi77@gmail.com</a></p>
+            </div>
+            <p>
+                © 2020 Summer Project. <a href="{% url 'home' %}">खुशीको सृजना | Creation of happiness, Charity</a>
+            </p>
+        </div>
+        <!-- move icon -->
+        <div class="txt-center">
+            <a href="#home" class="move-top txt-center mt-3"></a>
+        </div>
+        <!--//move icon -->
+    </footer>
+    <!--//footer -->
+</body>
 
-        <!-- footer -->
-        <footer class=" py-3" id="contactus">
-            <div class="icons mt-3 text-center">
-                <ul class="d-flex justify-content-center pb-3 social-icons">
-                   <li>
-                      <a href="#">
-                      <span class="fa fa-facebook-f"></span>
-                      </a>
-                   </li>
-                   <li class="mx-3">
-                      <a href="#">
-                      <span class="fa fa-twitter"></span>
-                      </a>
-                   </li>
-                   <li class="mr-3">
-                      <a href="#">
-                      <span class="fa fa-google"></span>
-                      </a>
-                   </li>
-                   <li><a href="#"><span class="fa fa-vk"></span></a></li>
-                </ul>
-            </div>
-            <div class="footer-main txt-center">
-                <div class=" footer-contact-list mb-2">
-                    <a href="tel:+9779861112142">+977 986-1112142</a>
-                </div>
-                <div class=" footer-contact-list mb-2">
-                    <p><a href="mailto:bpin.nakarmi77@gmail.com" style="font-style:italic;">bpin.nakarmi77@gmail.com</a></p>
-                </div>
-                <p> 
-                    © 2020 Summer Project. <a href="{% url 'home' %}">खुशीको सृजना | Creation of happiness, Charity</a>
-                </p>
-            </div>
-            <!-- move icon -->
-            <div class="txt-center">
-                <a href="#home" class="move-top txt-center mt-3"></a>
-            </div>
-            <!--//move icon -->
-        </footer>
-        <!--//footer -->
-    </body>
 </html>
