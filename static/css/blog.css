@@ -1,6 +1,6 @@
 .style-banner {
     text-align: center;
-    padding-top: 11em;    
+    padding-top: 11em;
 }
 
 .style-banner h4 {
@@ -8,7 +8,7 @@
     font-size: 3.5em;
     font-weight: 600;
     text-shadow: 2px -1px 4px #000;
-}   
+}
 
 .row {
     color: #ffffff;
@@ -18,14 +18,14 @@
 }
 
 .margin_b {
-    background-color: rgba(0, 179, 129, 0.9); 
+    background-color: rgba(0, 179, 129, 0.9);
     margin: 5px;
     width: 250px;
 }
 
 .margin_b:hover {
     transform: scale(1.1);
-    background-color: rgba(0, 179, 129, 1); 
+    background-color: rgba(0, 179, 129, 1);
 }
 
 .cover_image img {
@@ -49,11 +49,8 @@
     padding: 5px;
 }
 
-.created_at, .author{
+.created_at,
+.author {
     font-style: italic;
     padding: 5px;
 }
-
-
-
-

@@ -1,5 +1,15 @@
+.main-banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .row {
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
     margin-left: 25px;
     margin-right: 25px;
 }
@@ -32,6 +42,7 @@
 }
 
 .gallery-solo:hover {
-    transform: scale(1.7);
+    transform: scale(1.5);
+    transition: transform 700ms;
     background-color: rgba(0, 179, 129, 1);
 }

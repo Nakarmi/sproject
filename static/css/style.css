@@ -98,6 +98,7 @@ ul li {
     text-align: left;
 }
 
+
 /*-- //Reset-Code --*/
 
 .title {
@@ -156,9 +157,12 @@ ul li {
     color: #d2d2d2;
 }
 
+
 /* header */
 
+
 /* navigation */
+
 
 /* CSS Document */
 
@@ -167,6 +171,7 @@ ul li {
 [id^=drop] {
     display: none;
 }
+
 
 /* Giving a background-color to the nav container. */
 
@@ -196,6 +201,7 @@ nav {
     padding-top: 4px;
 }
 
+
 /* Since we'll have the "ul li" "float:left"
 * we need to add a clear after the container. */
 
@@ -204,6 +210,7 @@ nav:after {
     display: table;
     clear: both;
 }
+
 
 /* Removing padding, margin and "list-style" from the "ul",
 * and adding "position:reltive" */
@@ -216,6 +223,7 @@ nav ul {
     position: relative;
 }
 
+
 /* Positioning the navigation items inline */
 
 nav ul li {
@@ -223,6 +231,7 @@ nav ul li {
     display: inline-block;
     float: left;
 }
+
 
 /* Styling the links */
 
@@ -252,6 +261,7 @@ nav ul li ul li:hover {
     border: none;
 }
 
+
 /* Background color change on Hover */
 
 .menu li.active a,
@@ -264,6 +274,7 @@ nav ul li ul li:hover {
     -o-transition: 0.5s all;
     -ms-transition: 0.5s all;
 }
+
 
 /* Hide Dropdowns by Default
 * and giving it a position of absolute */
@@ -278,11 +289,13 @@ nav ul ul {
     box-shadow: -1px 1px 5px black;
 }
 
+
 /* Display Dropdowns on Hover */
 
 nav ul li:hover>ul {
     display: inherit;
 }
+
 
 /* Fisrt Tier Dropdown */
 
@@ -300,6 +313,7 @@ nav ul ul li a {
     background: transparent;
 }
 
+
 /* Second, Third and more Tiers	
 * We move the 2nd and 3rd etc tier dropdowns to the left
 * by the amount of the width of the first tier.
@@ -312,6 +326,7 @@ nav ul ul ul li {
     left: 170px;
 }
 
+
 /* Change ' +' in order to change the Dropdown symbol */
 
 li>a:only-child:after {
@@ -322,6 +337,7 @@ a.reqe-button {
     border: 2px solid rgba(255, 255, 255, 0.35);
     border-radius: 4px;
 }
+
 
 /* Media Queries
 --------------------------------------------- */
@@ -488,7 +504,9 @@ background-color: #212121;
     }
 }
 
+
 /*-- dropdown --*/
+
 
 /* banner */
 
@@ -545,7 +563,7 @@ background-color: #212121;
     background-color: rgba(208, 208, 208, 0.4);
     padding: 10px 33px;
     border: 1px solid rgba(208, 208, 208, 0);
-	opacity:0.8;
+    opacity: 0.8;
     transition: 0.5s all;
     -webkit-transition: 0.5s all;
     -moz-transition: 0.5s all;
@@ -574,7 +592,7 @@ background-color: #212121;
     font-size: 14px;
     padding: 8px 18px;
     border: 1px solid rgba(208, 208, 208, 0.4);
-    opacity:0.8;
+    opacity: 0.8;
     transition: 0.5s all;
     -webkit-transition: 0.5s all;
     -moz-transition: 0.5s all;
@@ -584,7 +602,7 @@ background-color: #212121;
 
 .view-buttn a:hover,
 .view-price a:hover {
-    opacity:1;
+    opacity: 1;
     transition: 0.5s all;
     transform: scale(1.1);
     -webkit-transition: 0.5s all;
@@ -593,7 +611,9 @@ background-color: #212121;
     -ms-transition: 0.5s all;
 }
 
+
 /* //banner */
+
 
 /* about */
 
@@ -626,7 +646,9 @@ background-color: #212121;
     height: 244px;
 }
 
+
 /*--// about-- */
+
 
 /*-- //counters --*/
 
@@ -659,7 +681,9 @@ background-color: #212121;
     line-height: 17px;
 }
 
+
 /*-- //counter --*/
+
 
 /*-- service-- */
 
@@ -671,6 +695,7 @@ background-color: #212121;
     background: url(../images/s2.jpg)no-repeat center;
 }
 
+
 /* .color-img-three {
     background: url(../images/s3.jpg)no-repeat center;
 } */
@@ -680,7 +705,9 @@ background-color: #212121;
 }
 
 .color-img-four,
+
 /* .color-img-three, */
+
 .color-img-two,
 .color-img-one {
     background-size: cover;
@@ -736,7 +763,9 @@ background-color: #212121;
     box-shadow: -2px 2px 8px black;
 }
 
+
 /*--//service-- */
+
 
 /*-- gallery-- */
 
@@ -750,9 +779,10 @@ background-color: #212121;
     color: #ffffff;
 }
 
-#see_more :hover{
+#see_more :hover {
     transform: scale(1.5);
 }
+
 
 /* popup */
 
@@ -800,9 +830,12 @@ background-color: #212121;
     color: #686de0;
 }
 
+
 /* //popup */
 
+
 /*--// gallery-- */
+
 
 /*-- team-- */
 
@@ -839,7 +872,9 @@ background-color: #212121;
     background: #00b381;
 }
 
+
 /*-- team-- */
+
 
 /* --blog-- */
 
@@ -893,11 +928,13 @@ background-color: #212121;
     line-height: 39px;
 }
 
+
 /* info-matter */
 
 .info-matter {
     background: #00b381;
 }
+
 
 /*-- contact-- */
 
@@ -962,11 +999,11 @@ button.sent-butnn {
     -moz-transition: 0.5s all;
     -o-transition: 0.5s all;
     -ms-transition: 0.5s all;
-	opacity:0.7;
+    opacity: 0.7;
 }
 
 button.sent-butnn:hover {
-	opacity:1;
+    opacity: 1;
     color: #fff;
     transition: 0.5s all;
     -webkit-transition: 0.5s all;
@@ -989,7 +1026,9 @@ button.sent-butnn:hover {
     line-height: 48px;
 }
 
+
 /*--// contact-- */
+
 
 /*--footer--*/
 
@@ -1021,7 +1060,9 @@ a.move-top {
     display: inline-block;
 }
 
+
 /*--// footer-- */
+
 
 /*-- responsive sizes --*/
 
@@ -1587,5 +1628,6 @@ a.move-top {
         font-size: 31px;
     }
 }
+
 
 /*-- //responsive sizes --*/
