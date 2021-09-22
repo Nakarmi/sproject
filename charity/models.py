@@ -120,6 +120,7 @@ class Donation(models.Model):
     purpose = models.CharField(max_length=9, choices=pu)
     mode = models.CharField(max_length=9, choices=m)
     amount = models.IntegerField(default=100)
+    image = models.ImageField(upload_to="Voucher", null=True)
     # zip_regex = RegexValidator(regex=r'^\d{10}$', message="Phone number must be entered in the format: '98********'. Up to 10 digits allowed.")
     # zip = models.CharField(max_length=100, null=True)
 

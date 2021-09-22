@@ -88,8 +88,9 @@ def SingleDonationView(request):
         purpose = request.POST["purpose"]
         amount = request.POST["amount"]
         mode = request.POST["mode"]
+        image = request.POST["voucher"]
         data = Donation(name=uname,email=mail,contact=contact,job=job,country=country,address=add,city=city,
-                        province=province, purpose=purpose, mode=mode, amount=amount)
+                        province=province, purpose=purpose, amount=amount, mode=mode, image=image)
         data.save()
         res = "Dear {} Thankyou for your support".format(uname)
         return render(request,template_name,{"status":res})

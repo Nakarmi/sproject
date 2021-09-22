@@ -18,10 +18,11 @@
             window.scrollTo(0, 1);
         }
 
-        if (window.history.replaceState) {
-            window.history.replaceState(null, null, window.location.href);
-        }
+        // if (window.history.replaceState) {
+        //     window.history.replaceState(null, null, window.location.href);
+        // }
     </script>
+    <link rel='stylesheet' href="../static/css/style.css" type='text/css' media="all">
     <!--//meta tags ends here-->
     <!--booststrap-->
     <link href="../static/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
@@ -30,11 +31,12 @@
     <link href="../static/css/font-awesome.min.css" rel="stylesheet">
     <!-- //font-awesome icons -->
     <!--stylesheets-->
-    <link href="../static/css/style.css" rel='stylesheet' type='text/css' media="all">
+
     <!--//stylesheets-->
     <link rel="icon" href="../static/images/title.png" type="images/jpg" sizes="12x12">
     <link href="//fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700" rel="stylesheet">
     <link href="//fonts.googleapis.com/css?family=Oxygen:400,700" rel="stylesheet">
+
 </head>
 
 <body>
@@ -92,26 +94,6 @@
             <div class="style-banner ">
                 <h4 class="mb-1">Blogs</h4>
             </div>
-            <!-- <div class="row"> 
-                        {% for i in blog %}  
-                        <div class="cover_image">
-                            <img src="{{ i.cover_image.url }}" alt="The Beginning" />
-                        </div>                                                     
-                        <div  class="blog_title">
-                            <span>{{i.title}}</span>
-                        </div>
-                        <div  class="created_at">
-                            <span>{{i.created_at}}</span>                                    
-                        </div>                        
-                        <div class="content_1">
-                            {{i.content|truncatechars:55}}
-                            <a href="#">Read more</a>
-                        </div>
-                        <div>
-                            <span class="author">-{{i.author}}</span>
-                        </div>
-                        {% endfor %}
-                    </div>                                                                -->
             <div class="row">
                 {% for i in blog %}
                 <div class="margin_b">
@@ -119,7 +101,7 @@
                         <img src="{{ i.cover_image.url }}" alt="The Beginning" />
                     </div>
                     <div class="blog_title">
-                        <span>{{i.title}}{{i.id}}</span>
+                        <span>{{i.title}}</span>
                     </div>
                     <div class="created_at">
                         <span>{{i.content}}</span>
