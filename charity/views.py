@@ -47,8 +47,8 @@ def SingleGalleryView(request):
     return render(request, template_name, {'images' : gallery})
 
 #single_state
-def SingleStateView(request):
-    state = State.objects.all()
+def SingleStateView(request,id):
+    state = State.objects.filter(id)
     template_name = "partials/state.html"
     return render(request, template_name, {'state':state})
 

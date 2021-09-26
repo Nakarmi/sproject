@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zxx">
+{% load static %}
 
 <head>
     <title>खुशीको सृजना | Creation of happiness - Charity</title>
@@ -7,37 +8,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="Oblige Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-        Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-    <script>
-        addEventListener("load", function() {
-            setTimeout(hideURLbar, 0);
-        }, false);
-
-        function hideURLbar() {
-            window.scrollTo(0, 1);
-        }
-
-        if (window.history.replaceState) {
-            window.history.replaceState(null, null, window.location.href);
-        }
-    </script>
-    {% if status %}
-    <script>
-        alert("{{status}}");
-    </script>
-    {% endif %}
+         Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" /> {% block script %} {% endblock script %}
     <!--//meta tags ends here-->
     <!--booststrap-->
-    <link href="../static/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" type="text/css" media="all">
     <!--//booststrap end-->
     <!-- font-awesome icons -->
-    <link href="../static/css/font-awesome.min.css" rel="stylesheet">
+    <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet">
     <!-- //font-awesome icons -->
     <!--stylesheets-->
-    <link href="../static/css/style.css" rel='stylesheet' type='text/css' media="all">
-    <link href="../static/css/form_style.css" rel='stylesheet' type='text/css' media="all">
+    <link href="{% static 'css/style.css' %}" rel='stylesheet' type='text/css' media="all">
+    <link href="{% static 'css/blog_detail.css' %}" rel='stylesheet' type='text/css' media="all">
     <!--//stylesheets-->
-    <link rel="icon" href="../static/images/title.png" type="images/jpg" sizes="12x12">
+    <link rel="icon" href="{% static 'images/title.png' %}" type="images/jpg" sizes="12x12">
     <link href="//fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700" rel="stylesheet">
     <link href="//fonts.googleapis.com/css?family=Oxygen:400,700" rel="stylesheet">
 </head>
@@ -92,80 +75,47 @@
             </div>
         </div>
         <!-- //header -->
-
         <!-- banner -->
         <div class="main-banner">
-            <div class="container">
-                <div class="form-banner ">
-                    <h4 class="mb-1">Join Hands For a Better World</h4>
-                    <h5>You have a good life,some other don't</h5>
+            <!-- left nav -->
+            <!-- <div class="left">
+                <a href="{% url 'single_blog' %}">
+                    <img src="{% static 'images/more.png' %}" alt="more" class="img-fluid">
+                </a>
+            </div> -->
+            <!-- //left nav -->
+            <!-- right nav -->
+            <!-- <div class="right">
+                <a href="{% url 'single_blog' %}">
+                    <img src="{% static 'images/more.png' %}" alt="more" class="img-fluid">
+                </a>
+            </div> -->
+            <!-- //right nav -->
+            <div class="row">
+                {% for i in blog %}
+                <h4 class="blog_title">{{i.title}}</h4>
+                <div class="margin_b">
+                    <div class="cover_image">
+                        <img src="{{ i.cover_image.url }}" alt="The Beginning" />
+                    </div>
+                    <div class="created_at">
+                        <span>{{i.created_at}}</span>,<span class="author">-{{i.author}}</span>
+                    </div>
+                    <div class="content">
+                        <span>{{i.content}}</span>
+                    </div>
                 </div>
+                {% endfor %}
             </div>
         </div>
         <!-- //banner -->
-
-        <!-- Form -->
-        <div class="formv">
-            <div class="form-container">
-                <div class="style-form">
-                    <form action="" method="post">
-                        {% csrf_token %}
-                        <!-- name -->
-                        <div class=" form-group contact-forms">
-                            <input type="text" class="form-control" placeholder="Name" name="name" required="">
-                        </div>
-                        <!-- address -->
-                        <div class=" form-group contact-forms">
-                            <input type="text" class="form-control" placeholder="Address" name="address" required="">
-                        </div>
-                        <!-- gender -->
-                        <div class="form-group contact-forms">
-                            <ul class="form-gender">
-                                <li>
-                                    <input type="radio" value="M" class="form-gender1" name="gender" required="">
-                                    <span class="gender-span">Male</span>
-                                </li>
-                                <li>
-                                    <input type="radio" value="F" class="form-gender2" name="gender" required="">
-                                    <span class="gender-span">Female</span>
-                                </li>
-                                <li>
-                                    <input type="radio" value="T" class="form-gender3" name="gender" required="">
-                                    <span class="gender-span">LGBTQ</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- email -->
-                        <div class="form-group contact-forms">
-                            <input type="email" class="form-control" placeholder="Email (if any)" name="email">
-                        </div>
-                        <!-- contact -->
-                        <div class=" form-group contact-forms">
-                            <input type="tel" class="form-control" placeholder="Contact (if any)" name="contact" pattern="[0-9]{10}">
-                        </div>
-                        <!-- time -->
-                        <div class=" form-group contact-forms">
-                            <input type="text" class="form-control" placeholder="Available at (Day) - (Time)" name="time" required="">
-                        </div>
-                        <!-- card -->
-                        <div class=" form-group contact-forms">
-                            <input type="file" class="form-control" placeholder="Valid ID Card" name="card" accept="image/x-png,image/gif,image/jpeg" required="">
-                        </div>
-                        <button type="submit" class="btn sent-butnn">Join</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <!-- //Form -->
-
     </div>
-    <!--//header-->
 
-    <!-- Location -->
+    <!--location -->
     <div class="address_mail_footer_grids">
-        <iframe src="https://maps.google.com/maps?q=orchid%20international%20college&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+        {% block location %} {% endblock location %}
     </div>
-    <!-- //Location -->
+    <!--//location -->
 
     <!-- footer -->
     <footer class=" py-3" id="contactus">
