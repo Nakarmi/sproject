@@ -84,29 +84,29 @@ class ContactUs(models.Model):
 
 #DONATION
 class Donation(models.Model):
-    pr = (
-        # ("P", "Provinces"),
-        ("P1", "Province 1"),
-        ("P2", "Province 2"),
-        ("P3", "Province 3"),
-        ("P4", "Province 4"),
-        ("P5", "Province 5"),
-        ("P6", "Province 6"),
-        ("P7", "Province 7"),
-    ) 
-    pu = (
-        # ('P', 'Purpose'),
-        ('f', 'Food'),
-        ('e', 'Education'),
-        ('c', 'Clothing'),
-        ('h', 'Health'),
-        ('s', 'Shelter'),
-    )
-    m = (
-        # ('m', 'mode'),
-        ('q', 'QR Code'),
-        ('c', 'Cheque'),
-    )
+    # pr = (
+    #     # ("P", "Provinces"),
+    #     ('Province 1'),
+    #     ('Province 2'),
+    #     ('Province 3'),
+    #     ('Province 4'),
+    #     ('Province 5'),
+    #     ('Province 6'),
+    #     ('Province 7'),
+    # ) 
+    # pu = (
+    #     # ('P', 'Purpose'),
+    #     ('Food'),
+    #     ('Education'),
+    #     ('Clothing'),
+    #     ('Health'),
+    #     ('Shelter'),
+    # )
+    # m = (
+    #     # ('m', 'mode'),
+    #     ('QR Code'),
+    #     ('Cheque'),
+    # )
     name = models.CharField(max_length=255)    
     email_regex = RegexValidator(regex=r'^[a-z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w{2,3}$', message="Email must be entered in the format: 'example@example.com'")
     email = models.CharField(validators=[email_regex], max_length=100, blank=True)
@@ -116,11 +116,11 @@ class Donation(models.Model):
     country = models.CharField(max_length=100)  
     address = models.CharField(max_length=100, blank=True)
     city = models.CharField(max_length=100, blank=True)
-    province = models.CharField(max_length=100, choices=pr)
-    purpose = models.CharField(max_length=9, choices=pu)
-    mode = models.CharField(max_length=9, choices=m)
+    province = models.CharField(max_length=100)
+    purpose = models.CharField(max_length=9)
+    mode = models.CharField(max_length=9)
     amount = models.IntegerField(default=100)
-    image = models.ImageField(upload_to="Voucher", null=True)
+    image = models.ImageField(upload_to="Voucher", null=True, blank=True)
     sponsor = models.CharField(max_length=255, null=True)
     # zip_regex = RegexValidator(regex=r'^\d{10}$', message="Phone number must be entered in the format: '98********'. Up to 10 digits allowed.")
     # zip = models.CharField(max_length=100, null=True)
