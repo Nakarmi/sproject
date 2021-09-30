@@ -1,198 +1,187 @@
 <!DOCTYPE html>
 <html lang="zxx">
-   {% load static %}
-   <head>
-      <title>खुशीको सृजना | Creation of happiness - Charity</title>
-      <!--meta tags -->
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="keywords" content="Oblige Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-         Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-      {% block script %}
-      {% endblock script %}
-      <!--//meta tags ends here-->
-      <!--booststrap-->
-      <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" type="text/css" media="all">
-      <!--//booststrap end-->
-      <!-- font-awesome icons -->
-      <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet">
-      <!-- //font-awesome icons -->
-      <!--stylesheets-->
-      <link href="{% static 'css/style.css' %}" rel='stylesheet' type='text/css' media="all">
-      <link href="{% static 'css/about.css' %}" rel='stylesheet' type='text/css' media="all">
-      <!--//stylesheets-->
-      <link rel="icon" href="{% static 'images/title.png' %}" type="images/jpg" sizes="12x12">
-      <link href="//fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700" rel="stylesheet">
-      <link href="//fonts.googleapis.com/css?family=Oxygen:400,700" rel="stylesheet">
-   </head>
-   <body>
-      <!--header-->
-      <div class="main-top" id="home">
-         <!-- header -->
-         <div class="headder-top">
-            {% block header %}
-            {% endblock header %}
-         </div>
-         <!-- //header -->
-         <!-- banner -->
-         <div class="main-banner">
-            {% block banner %}
-            {% endblock banner %}
-         </div>
-         <!-- //banner -->
-      </div>
-      <!--//header-->
+{% load static %}
 
-      <!--donation-->
-      <!-- <section class="three-grids">
+<head>
+    <title>खुशीको सृजना | Creation of happiness - Charity</title>
+    <!--meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Oblige Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+         Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" /> {% block script %} {% endblock script %}
+    <!--//meta tags ends here-->
+    <!--booststrap-->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" type="text/css" media="all">
+    <!--//booststrap end-->
+    <!-- font-awesome icons -->
+    <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet">
+    <!-- //font-awesome icons -->
+    <!--stylesheets-->
+    <link href="{% static 'css/style.css' %}" rel='stylesheet' type='text/css' media="all">
+    <link href="{% static 'css/about.css' %}" rel='stylesheet' type='text/css' media="all">
+    <!--//stylesheets-->
+    <link rel="icon" href="{% static 'images/title.png' %}" type="images/jpg" sizes="12x12">
+    <link href="//fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Oxygen:400,700" rel="stylesheet">
+</head>
+
+<body>
+    <!--header-->
+    <div class="main-top" id="home">
+        <!-- header -->
+        <div class="headder-top">
+            {% block header %} {% endblock header %}
+        </div>
+        <!-- //header -->
+        <!-- banner -->
+        <div class="main-banner">
+            {% block banner %} {% endblock banner %}
+        </div>
+        <!-- //banner -->
+    </div>
+    <!--//header-->
+
+    <!--donation-->
+    <!-- <section class="three-grids">
          {% block donation %}
          {% endblock donation %}
       </section> -->
-      <!--//donation-->
+    <!--//donation-->
 
-      <!--about-->
-      <section class="about py-lg-4 py-md-3 py-sm-3 py-3" id="about">
-        {% block about %}
-        {% endblock about %}
-      </section>
-      <!--//about-->
+    <!--about-->
+    <section class="about py-lg-4 py-md-3 py-sm-3 py-3" id="about">
+        {% block about %} {% endblock about %}
+    </section>
+    <!--//about-->
 
-      <!--state -->
-      <section class="stats py-lg-4 py-md-3 py-sm-3 py-3">
-        {% block state %}
-        {% endblock state %}
-      </section>
-      <!--//state -->
+    <!--state -->
+    <section class="stats py-lg-4 py-md-3 py-sm-3 py-3">
+        {% block state %} {% endblock state %}
+    </section>
+    <!--//state -->
 
-      <!-- service -->
-      <section class="service py-lg-4 py-md-3 py-sm-3 py-3" id="service">
-        {% block service %}
-        {% endblock service %}
-      </section>
-      <!--//service -->
+    <!-- service -->
+    <section class="service py-lg-4 py-md-3 py-sm-3 py-3" id="service">
+        {% block service %} {% endblock service %}
+    </section>
+    <!--//service -->
 
-      <!-- gallery-main -->
-      <section class="gallery py-lg-4 py-md-3 py-sm-3 py-3" id="gallery">
-        {% block gallery %}
-        {% endblock gallery %}
-      </section>
-      <!--// gallery-main -->
-      
-      <!--Gallery Popup-->  
-      <!-- popup-->
-      <div id="gal1" class="popup-effect">
+    <!-- gallery-main -->
+    <section class="gallery py-lg-4 py-md-3 py-sm-3 py-3" id="gallery">
+        {% block gallery %} {% endblock gallery %}
+    </section>
+    <!--// gallery-main -->
+
+    <!--Gallery Popup-->
+    <!-- popup-->
+    <div id="gal1" class="popup-effect">
         <div class="popup">
-          <img src="{% static 'images/g1.jpg' %}" alt="Popup Image" class="img-fluid" />
-          <a class="close" href="#gallery">&times;</a>
+            <img src="{% static 'images/g1.jpg' %}" alt="Popup Image" class="img-fluid" />
+            <a class="close" href="#gallery">&times;</a>
         </div>
-      </div>
-      <!-- //popup -->
-      <!-- popup-->
-      <div id="gal2" class="popup-effect">
+    </div>
+    <!-- //popup -->
+    <!-- popup-->
+    <div id="gal2" class="popup-effect">
         <div class="popup">
-          <img src="{% static 'images/g2.jpg' %}" alt="Popup Image" class="img-fluid" />
-          <a class="close" href="#gallery">&times;</a>
+            <img src="{% static 'images/g2.jpg' %}" alt="Popup Image" class="img-fluid" />
+            <a class="close" href="#gallery">&times;</a>
         </div>
-      </div>
-      <!-- //popup -->
-      <!-- popup-->
-      <div id="gal3" class="popup-effect">
+    </div>
+    <!-- //popup -->
+    <!-- popup-->
+    <div id="gal3" class="popup-effect">
         <div class="popup">
-          <img src="{% static 'images/g3.jpg' %}" alt="Popup Image" class="img-fluid" />
-          <a class="close" href="#gallery">&times;</a>
+            <img src="{% static 'images/g3.jpg' %}" alt="Popup Image" class="img-fluid" />
+            <a class="close" href="#gallery">&times;</a>
         </div>
-      </div>
-      <!-- //popup -->
-      <!-- popup-->
-      <div id="gal4" class="popup-effect">
+    </div>
+    <!-- //popup -->
+    <!-- popup-->
+    <div id="gal4" class="popup-effect">
         <div class="popup">
-          <img src="{% static 'images/g4.jpg' %}" alt="Popup Image" class="img-fluid" />
-          <a class="close" href="#gallery">&times;</a>
+            <img src="{% static 'images/g4.jpg' %}" alt="Popup Image" class="img-fluid" />
+            <a class="close" href="#gallery">&times;</a>
         </div>
-      </div>
-      <!-- //popup -->
-      <!-- popup-->
-      <div id="gal5" class="popup-effect">
+    </div>
+    <!-- //popup -->
+    <!-- popup-->
+    <div id="gal5" class="popup-effect">
         <div class="popup">
-          <img src="{% static 'images/g5.jpg' %}" alt="Popup Image" class="img-fluid" />
-          <a class="close" href="#gallery">&times;</a>
+            <img src="{% static 'images/g5.jpg' %}" alt="Popup Image" class="img-fluid" />
+            <a class="close" href="#gallery">&times;</a>
         </div>
-      </div>
-      <!-- //popup -->
-      <!-- popup-->
-      <div id="gal6" class="popup-effect">
+    </div>
+    <!-- //popup -->
+    <!-- popup-->
+    <div id="gal6" class="popup-effect">
         <div class="popup">
-          <img src="{% static 'images/g6.jpg' %}" alt="Popup Image" class="img-fluid" />
-          <a class="close" href="#gallery">&times;</a>
+            <img src="{% static 'images/g6.jpg' %}" alt="Popup Image" class="img-fluid" />
+            <a class="close" href="#gallery">&times;</a>
         </div>
-      </div>
-      <!-- //popup -->
-      <!-- popup-->
-      <div id="gal7" class="popup-effect">
+    </div>
+    <!-- //popup -->
+    <!-- popup-->
+    <div id="gal7" class="popup-effect">
         <div class="popup">
-          <img src="{% static 'images/g7.jpg' %}" alt="Popup Image" class="img-fluid" />
-          <a class="close" href="#gallery">&times;</a>
+            <img src="{% static 'images/g7.jpg' %}" alt="Popup Image" class="img-fluid" />
+            <a class="close" href="#gallery">&times;</a>
         </div>
-      </div>
-      <!-- //popup -->
-      <!-- popup-->
-      <div id="gal8" class="popup-effect">
+    </div>
+    <!-- //popup -->
+    <!-- popup-->
+    <div id="gal8" class="popup-effect">
         <div class="popup">
-          <img src="{% static 'images/g8.jpg' %}" alt="Popup Image" class="img-fluid" />
-          <a class="close" href="#gallery">&times;</a>
+            <img src="{% static 'images/g8.jpg' %}" alt="Popup Image" class="img-fluid" />
+            <a class="close" href="#gallery">&times;</a>
         </div>
-      </div>
-      <!-- //popup -->
-      <!-- popup-->
-      <div id="gal9" class="popup-effect">
+    </div>
+    <!-- //popup -->
+    <!-- popup-->
+    <div id="gal9" class="popup-effect">
         <div class="popup">
-          <img src="{% static 'images/g9.jpg' %}" alt="Popup Image" class="img-fluid" />
-          <a class="close" href="#gallery">&times;</a>
+            <img src="{% static 'images/g9.jpg' %}" alt="Popup Image" class="img-fluid" />
+            <a class="close" href="#gallery">&times;</a>
         </div>
-      </div>
-      <!-- //popup -->
-      <!--//Gallery Popup-->
+    </div>
+    <!-- //popup -->
+    <!--//Gallery Popup-->
 
-      <!-- blog -->
-      <section class="blog py-lg-4 py-md-3 py-sm-3 py-3" id="blog">
-        {% block blog %}
-        {% endblock blog %}
-      </section>
-      <!-- //blog -->
+    <!-- blog -->
+    <section class="blog py-lg-4 py-md-3 py-sm-3 py-3" id="blog">
+        {% block blog %} {% endblock blog %}
+    </section>
+    <!-- //blog -->
 
-      <!-- Joinus -->
-      <section class="info-matter py-lg-4 py-md-3 py-sm-3 py-3" id="info-matter">
-        {% block joinus %}
-        {% endblock joinus %}
-      </section>
-      <!--// Joinus-->
+    <!-- Joinus -->
+    <section class="info-matter py-lg-4 py-md-3 py-sm-3 py-3" id="info-matter">
+        {% block joinus %} {% endblock joinus %}
+    </section>
+    <!--// Joinus-->
 
-      <!-- contact -->
-      <section class="contact py-lg-4 py-md-3 py-sm-3 py-3" id="contact">
-        {% block contact %}
-        {% endblock contact %}
-      </section>
-      <!--//contact -->
+    <!-- contact -->
+    <section class="contact py-lg-4 py-md-3 py-sm-3 py-3" id="contact">
+        {% block contact %} {% endblock contact %}
+    </section>
+    <!--//contact -->
 
-      <!--team -->
-      <section class="team py-lg-4 py-md-3 py-sm-3 py-3" id="team">
-        {% block team %}
-        {% endblock team %}
-      </section>
-      <!--//team -->
+    <!--team -->
+    <section class="team py-lg-4 py-md-3 py-sm-3 py-3" id="team">
+        {% block team %} {% endblock team %}
+    </section>
+    <!--//team -->
 
-       <!--location -->
-      <div class="address_mail_footer_grids">
-        {% block location %}
-        {% endblock location %}
-      </div>
-       <!--//location -->
+    <!--location -->
+    <div class="address_mail_footer_grids">
+        {% block location %} {% endblock location %}
+    </div>
+    <!--//location -->
 
-       <!-- footer -->
-      <footer class=" py-3" id="footer">
-        {% block footer %}
-        {% endblock footer %}
-      </footer>
-      <!--//footer -->
-   </body>
+    <!-- footer -->
+    <footer class=" py-3" id="footer">
+        {% block footer %} {% endblock footer %}
+    </footer>
+    <!--//footer -->
+</body>
+
 </html>

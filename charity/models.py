@@ -49,7 +49,7 @@ class Volunteer(models.Model):
     phone_regex = RegexValidator(regex=r'^\d{10}$', message="Phone number must be entered in the format: '98********'. Up to 10 digits allowed.")
     contact = models.CharField(validators=[phone_regex], max_length=10, null=True, blank=True)
     time = models.CharField(max_length=75)
-    status = models.BooleanField(null=True)
+    status = models.BooleanField(null=True, blank=True)
     joined_from = models.DateTimeField(auto_now_add=True)
     image = models.ImageField(upload_to="ID", null=True)
     # slug = models.SlugField(max_length=255, null=True)
@@ -121,11 +121,12 @@ class Donation(models.Model):
     mode = models.CharField(max_length=9, choices=m)
     amount = models.IntegerField(default=100)
     image = models.ImageField(upload_to="Voucher", null=True)
+    sponsor = models.CharField(max_length=255, null=True)
     # zip_regex = RegexValidator(regex=r'^\d{10}$', message="Phone number must be entered in the format: '98********'. Up to 10 digits allowed.")
     # zip = models.CharField(max_length=100, null=True)
 
     def __str__(self):
-        return self.name+" "+self.email+" "+self.contact+" "+self.country+" "+self.address+" "+self.city+" "+self.province+" "+self.purpose+" "+self.mode+" "+str(self.amount)
+        return self.name+" "+self.email+" "+self.contact+" "+self.country+" "+self.address+" "+self.city+" "+self.province+" "+self.purpose+" "+self.mode+" "+str(self.amount)+" "+str(self.sponsor)
 
 #ACTIVITIES
 class Activities(models.Model):
