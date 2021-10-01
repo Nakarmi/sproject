@@ -122,11 +122,12 @@ class Donation(models.Model):
     amount = models.IntegerField(default=100)
     image = models.ImageField(upload_to="Voucher", null=True, blank=True)
     sponsor = models.CharField(max_length=255, null=True, blank=True)
+    donated_date = models.DateTimeField(auto_now_add=True)
     # zip_regex = RegexValidator(regex=r'^\d{10}$', message="Phone number must be entered in the format: '98********'. Up to 10 digits allowed.")
     # zip = models.CharField(max_length=100, null=True)
 
     def __str__(self):
-        return self.name+" "+self.email+" "+self.contact+" "+self.country+" "+self.address+" "+self.city+" "+self.province+" "+self.purpose+" "+self.mode+" "+str(self.amount)+" "+str(self.sponsor)
+        return self.name+" "+self.email+" "+self.contact+" "+self.country+" "+self.address+" "+self.city+" "+self.province+" "+self.purpose+" "+self.mode+" "+str(self.amount)+" "+str(self.sponsor)+" "+str(self.donated_date)
 
 #ACTIVITIES
 class Activities(models.Model):
