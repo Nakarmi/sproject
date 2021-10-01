@@ -1,6 +1,8 @@
 from django.shortcuts import render, HttpResponse
 from django.views import View
 from charity.models import Volunteer, State, Blog, Gallery, Donation, Activities, ContactUs, Sponsor
+from django.template.loader import get_template
+from xhtml2pdf import pisa
 
 # Create your views here.
 #single_joinus
@@ -27,6 +29,27 @@ def SingleAboutView(request):
     about = Activities.objects.all().order_by('date').reverse()
     template_name = "single_about.html"
     return render(request, template_name, {'about':about})
+
+#pdf_report_create
+def pdf_report_create(request):
+    about = Activities.objects.all().order_by('date').reverse()
+    template_path = 'pdf_report.html'
+    context = {'about': about}
+    # Create a Django response object, and specify content_type as pdf
+    response = HttpResponse(content_type='application/pdf')
+    # response['Content-Disposition'] = 'attachment; filename="charity_activities.pdf"'
+    response['Content-Disposition'] = 'filename="charity_activities.pdf"'
+    # find the template and render it.
+    template = get_template(template_path)
+    html = template.render(context)
+
+    # create a pdf
+    pisa_status = pisa.CreatePDF(
+       html, dest=response)
+    # if error then show some funy view
+    if pisa_status.err:
+       return HttpResponse('We had some errors <pre>' + html + '</pre>')
+    return response
 
 #single_blog
 def SingleBlogView(request):

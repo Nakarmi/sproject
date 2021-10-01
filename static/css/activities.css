@@ -1,26 +1,24 @@
 .style-banner {
     text-align: center;
     padding-top: 11em;
+    align-content: center;
 }
 
-table{
-    text-align: justify;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: rgba(0, 179, 129, 0.7); 
+table {
+    background-color: rgba(0, 179, 129, 0.7);
     color: #ffffff;
-    width: 60%;
+    width: 100%;
     text-align: center;
 }
 
 th {
-    border-radius: px;;
+    border-radius: px;
 }
 
-/* td, th {
-    border: 1.5px solid black;
-} */
-
-
-
-
+#pdf {
+    float: right;
+    font-size: 12px;
+    padding: 3px;
+    background-color: rgba(0, 179, 129, 0.7);
+    border: none;
+}

@@ -47,7 +47,7 @@ class DonationAdmin(admin.ModelAdmin):
 
 # ACTIVITIES
 class ActivitiesAdmin(admin.ModelAdmin):
-    list_display = ["id", "date", "event", "location", "status"]
+    list_display = ["id", "date", "event", "location", "status", "amount_spent", "volunteer"]
     search_fields = ["date", "location"]
     list_filter = ["date", "location", "status"]
 

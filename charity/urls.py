@@ -4,6 +4,7 @@ from charity import views
 urlpatterns = [
    path("single_joinus", views.SingleJoinusView, name="single_joinus"),
    path("single_about", views.SingleAboutView, name="single_about"),
+   path("create_pdf", views.pdf_report_create, name="create_pdf"),
    path("single_blog", views.SingleBlogView, name="single_blog"),
    path("single_gallery", views.SingleGalleryView, name="single_gallery"),
    path("state/<int:id>", views.SingleStateView, name="state"),

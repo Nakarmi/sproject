@@ -139,10 +139,12 @@ class Activities(models.Model):
     date = models.DateField(auto_now_add=False)
     event = models.CharField(max_length=750)
     location = models.CharField(max_length=250)
+    amount_spent = models.IntegerField(max_length=12)
+    volunteer = models.IntegerField(max_length=5)
     status = models.CharField(max_length=9, choices=a)
 
     def __str__(self):
-        return str(self.date)+" "+self.event+" "+self.location+" "+self.status
+        return str(self.date)+" "+self.event+" "+self.location+" "+str(self.amount_spent)+" "+str(self.volunteer)+" "+self.status
 
     class Meta:
         verbose_name_plural = "Activities"

@@ -1,0 +1,30 @@
+body {
+    text-align: center;
+}
+
+#logo {
+    background-color: rgba(0, 179, 129, 1.5);
+    font-size: 24px;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.title {
+    color: white;
+    text-decoration: none;
+}
+
+h4 {
+    font-size: 22px;
+    margin-bottom: -5%;
+}
+
+table {
+    border: 1px solid black;
+    padding: 3px;
+    font-size: 14px;
+}
+
+td {
+    font-style: italic;
+}

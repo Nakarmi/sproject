@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <link href="../static/css/pdf.css" rel='stylesheet' type='text/css' media="all">
+</head>
+
+<body>
+    <div class="main-banner">
+        <div class="container">
+            <div class="style-banner">
+                <div id="logo">
+                    <h1><a class="title" href="{% url 'home' %}" style="text-align: center;">Khushi Ko Srijana - Creation of Happiness</a></h1>
+                </div>
+                <h4 class="mb-1">Activities</h4>
+                <table>
+                    <tr>
+                        <!-- <th>ID</th> -->
+                        <th>Date</th>
+                        <th>Events</th>
+                        <th>Location</th>
+                        <th>Amount Spent</th>
+                        <th>Status</th>
+                        <th>Volunteers Involved</th>
+                    </tr>
+                    {% for i in about %}
+                    <tr>
+                        <!-- <td>{{i.id}}</td> -->
+                        <td>{{i.date}}</td>
+                        <td>{{i.event}}</td>
+                        <td>{{i.location}}</td>
+                        <td>{{i.amount_spent}}</td>
+                        <td>{{i.status}}</td>
+                        <td>{{i.volunteer}}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
