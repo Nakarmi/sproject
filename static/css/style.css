@@ -102,7 +102,7 @@ ul li {
 /*-- //Reset-Code --*/
 
 .title {
-    font-size: 44px;
+    font-size: 30px;
     color: #000;
     letter-spacing: 2px;
     font-weight: 400;
@@ -618,7 +618,7 @@ background-color: #212121;
 /* about */
 
 .about-imgs-txt {
-    background: url(../images/aab1.jpg)no-repeat center;
+    background: url(../images/aab101.jpg)no-repeat center;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -909,6 +909,10 @@ background-color: #212121;
 }
 
 .busness-tip-two {
+    background: url(../images/aab101.jpg)no-repeat 0px 0px;
+}
+
+.busness-tip-three {
     background: url(../images/bb2.jpg)no-repeat 0px 0px;
 }
 

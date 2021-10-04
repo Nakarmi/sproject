@@ -1,64 +1,44 @@
 {% load static %}
 
 <div class="container py-lg-5 py-md-4 py-sm-4 py-3">
-    <h3 class="title text-center mb-md-4 mb-sm-3 mb-3 mb-2">Stay Connected</h3>
+    <h3 class="title text-center mb-md-4 mb-sm-3 mb-3 mb-2">You can find us at:</h3>
     <div class="title-wls-text text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">
-       <p>
-          Feel free to drop your messages.
-       </p>
+        <p>
+            Feel free to drop your messages.
+        </p>
     </div>
-    <div class="row">
-       <div class="col-lg-6 col-md-6 contact-details">
-          <form action="" method="post">
-             {% csrf_token %}
-             <div class=" form-group contact-forms">
-                <input type="text" class="form-control" placeholder="Name" name="name" required="">
-             </div>
-             <div class="form-group contact-forms">
-                <input type="email" class="form-control" placeholder="Email" name="email" required="">
-             </div>
-             <div class="form-group contact-forms">
-                <input type="text" class="form-control" placeholder="Contact" pattern="[0-9]{10}" name="contact" required=""> 
-             </div>
-             <div class="form-group contact-forms">
-                <textarea class="form-control" placeholder="Message" rows="7" name="msg" required=""></textarea>
-             </div>
-             <button type="submit" class="btn sent-butnn">Submit</button>
-          </form>
-       </div>
-       <div class="col-lg-6 col-md-6 address-grid text-center">
-          <div class="contact-address-grid mb-3">
-             <h4> Address</h4>
-          </div>
-          <div class=" footer-contact-list mb-2">
-             <p>Jenla, Bhaktapur,<br>Bagmati, Nepal.</p>
-          </div>
-          <div class=" footer-contact-list mb-2">
+    <div class="title-wls-text text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">
+        <div class="contact-address-grid mb-3">
+            Our prime office locates at Jenla- 08 Bhaktapur,Bagmati-Nepal.
+        </div>
+        <div class=" footer-contact-list mb-2">
+            Call us on:
             <a href="tel:+9779861112142" style="color:  rgb(0, 179, 129);">+977 986-1112142</a>
-          </div>
-          <div class=" footer-contact-list mb-2">
-             <p><a href="mailto:bpin.nakarmi77@gmail.com" style="font-style:italic; color:  rgb(0, 179, 129);">bpin.nakarmi77@gmail.com</a></p>
-          </div>
-          <div class="icons mt-3 text-center">
+        </div>
+        <div class=" footer-contact-list mb-2">
+            Mail us at:
+            <a href="mailto:bpin.nakarmi77@gmail.com" style="font-style:italic; color:  rgb(0, 179, 129);">bpin.nakarmi77@gmail.com</a>
+        </div>
+        <div class="icons mt-3 text-center">
+            Follow us on:
             <ul class="d-flex justify-content-center pb-3 social-icons">
-               <li>
-                  <a href="https://www.facebook.com/">
-                  <span class="fa fa-facebook-f"></span>
-                  </a>
-               </li>
-               <li class="mx-3">
-                  <a href="https://www.twitter.com/">
-                  <span class="fa fa-twitter"></span>
-                  </a>
-               </li>
-               <li class="mr-3">
-                  <a href="https://www.google.com/">
-                  <span class="fa fa-google"></span>
-                  </a>
-               </li>
+                <li>
+                    <a href="https://www.facebook.com/">
+                        <span class="fa fa-facebook-f"></span>
+                    </a>
+                </li>
+                <li class="mx-3">
+                    <a href="https://www.twitter.com/">
+                        <span class="fa fa-twitter"></span>
+                    </a>
+                </li>
+                <li class="mr-3">
+                    <a href="https://www.google.com/">
+                        <span class="fa fa-google"></span>
+                    </a>
+                </li>
             </ul>
-          </div>
-         </div>
-       </div>
+        </div>
     </div>
+</div>
 </div>

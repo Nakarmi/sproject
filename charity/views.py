@@ -65,9 +65,9 @@ def BlogDetailView(request,id):
 
 #single_gallery
 def SingleGalleryView(request):
-    gallery = Gallery.objects.all().order_by('id').reverse()
+    images = Gallery.objects.all().order_by('id').reverse()
     template_name = "single_gallery.html"
-    return render(request, template_name, {'images' : gallery})
+    return render(request, template_name, {'images' : images})
 
 #single_state
 def SingleStateView(request,id):

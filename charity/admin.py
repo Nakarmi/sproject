@@ -30,7 +30,7 @@ class VolunteerAdmin(admin.ModelAdmin):
 
 #STATE
 class StateAdmin(admin.ModelAdmin):
-    list_display = ["id", "donation", "volunteers", "rescued"]
+    list_display = ["id", "donation", "volunteers"]
 
 # ContactUs
 class ContactUsAdmin(admin.ModelAdmin):
@@ -40,7 +40,7 @@ class ContactUsAdmin(admin.ModelAdmin):
 
 # Donation
 class DonationAdmin(admin.ModelAdmin):
-    list_display = ["id", "name", "contact", "job", "country", "province", "purpose", "mode", "donated_date"]
+    list_display = ["id", "name", "job", "amount", "province", "purpose", "mode", "donated_date", "sponsor"]
     search_fields = ["name", "city", "purpose", "donation_date"]
     list_filter = ["province", "job", "mode", "donated_date"]
     # list_editable = ["address"]

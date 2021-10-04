@@ -8,7 +8,6 @@ from django.core.validators import RegexValidator
 
 #BLOG
 class Blog(models.Model):
-    id = models.IntegerField(primary_key='True', default=0)
     title = models.CharField(max_length=255)
     content = models.TextField()
     # count = models.IntegerField(default=0)
@@ -61,7 +60,6 @@ class Volunteer(models.Model):
 class State(models.Model):
     donation = models.IntegerField()
     volunteers = models.IntegerField()
-    rescued = models.IntegerField()
     updated_at = models.DateField(auto_now=True)
     def __str__(self):
         return str(self.donation)+" "+str(self.volunteers)+" "+str(self.rescued)
@@ -139,8 +137,8 @@ class Activities(models.Model):
     date = models.DateField(auto_now_add=False)
     event = models.CharField(max_length=750)
     location = models.CharField(max_length=250)
-    amount_spent = models.IntegerField(max_length=12)
-    volunteer = models.IntegerField(max_length=5)
+    amount_spent = models.IntegerField()
+    volunteer = models.IntegerField()
     status = models.CharField(max_length=9, choices=a)
 
     def __str__(self):
